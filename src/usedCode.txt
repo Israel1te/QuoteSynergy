@@ -1,0 +1,45 @@
+<h1>{ title }</h1>
+        <p>Liked {Math.floor(Math.random() * 100)} times</p>
+        <a href={link}>Google Site</a>
+
+---
+
+const handleClickAgain = (name) => {
+        console.log('hello ' + name);
+    }
+
+    //goes inside const Home in home.js...
+
+<button onClick={() => handleClickAgain('mario')}>Click me again</button>
+
+//this part goes into the return statement ^
+
+
+-----------------------------------
+
+    // let name = 'Mario';
+    let [name, setName] = useState('mario')
+    let [age, setAge] = useState(15)
+
+    const handleClick = () => {
+        setName('luigi');
+        setAge(age+=1)
+    }
+
+-------------------------------------
+filter outputted bloglist 
+
+<BlogList blogs={blogs.filter((blogs) => blogs.author === 'Izzy')} title = "Izzy's Blogs" />
+
+----------------------------------------
+
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs)
+    }
+
+    //handles delete
+    //pass into the function with ...
+     handleDelete={handleDelete}
+
+    //
