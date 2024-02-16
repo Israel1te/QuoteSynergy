@@ -24,4 +24,8 @@ yarn-error.log*
 
 .env
 
+<<<<<<< HEAD
 config.json
+=======
+
+>>>>>>> c85e3801dd0aa84aa5ff01d0c92a557d66b54d34
