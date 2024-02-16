@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Home from "./Home";
+import Openai from "./Openai";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/react-router-dom.min";
 import Create from "./Create";
 import NotFound from "./NotFound";
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path = "/create">
             <Create />
+          </Route>
+          <Route path = "/openai">
+            <Openai/>
           </Route>
           <Route path="*">
             <NotFound />

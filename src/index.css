@@ -34,13 +34,14 @@
   padding: 20px;
 }
 
-/* create new blog form */
+
 .create {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
-.create label {
+.create label,
+.openai label {
   text-align: left;
   display: block;
 }
@@ -50,7 +51,7 @@
   margin-bottom: 30px;
 }
 .create input,
-.create textarea,
+.openai textarea,
 .create select {
   width: 100%;
   padding: 6px 10px;
@@ -68,4 +69,11 @@
   cursor: pointer;
 }
 
-
+.openai button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
