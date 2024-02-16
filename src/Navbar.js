@@ -5,11 +5,8 @@ const Navbar = () => {
             <h1>QuoteSynergy</h1>
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/create" style={{
-                    // color: "white",
-                    // backgroundColor: "#f1356d",
-                    // borderRadius: "8px"
-                }}>Login</Link>
+                <Link to="/create">Login</Link>
+                <Link to="/openai">Generate</Link>
             </div>
         </nav>
      );
