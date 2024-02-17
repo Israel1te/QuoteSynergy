@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url('https://fonts-googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 /* base styles */
 * {
   margin: 0;
@@ -33,7 +34,6 @@
   margin: 40px auto;
   padding: 20px;
 }
-
 
 .create {
   max-width: 400px;
@@ -76,4 +76,105 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+.blog-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-list .wrapper {
+  width: 605px;
+  background: #e7e0e0;
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+}
+
+.blog-list .wrapper h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.blog-list .wrapper .home-content {
+  margin: 35px 0;
+}
+
+.home-content .quote-area{
+  display: flex;
+  justify-content: center;
+}
+.quote-area i {
+  font-size: 15px;
+}
+.quote-area i:first-child {
+  margin: 3px 10px 0 0;
+}
+.quote-area i:last-child {
+ display: flex;
+ align-items: flex-end;
+ margin: 0 0 3px 10px;
+}
+.quote-area .quote {
+  font-size: 22px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.home-content .author {
+  display: flex;
+  font-size: 18px;
+  font-style: italic;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.author span:first-child{
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+
+.wrapper .buttons {
+  border-top: 1px solid #ccc;
+}
+
+.buttons .features  {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.features ul {
+  display: flex;
+}
+
+.features ul li {
+  list-style: none;
+  margin: 0 5px;
+  display: flex;
+  height: 47px;
+  width: 47px;
+  border: 2px solid #5372F0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.features ul li:hover {
+  color: #fff;
+  background: #5372F0;
+}
+.features button {
+  border: none;
+  outline: none;
+  background: #5372F0;
+  padding: 13px 22px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-style: 16px;
+}
+button.loading{
+  opacity: 0.7;
+  pointer-events: none;
 }
