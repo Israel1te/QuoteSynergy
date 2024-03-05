@@ -1,42 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts-googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts-googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 /* base styles */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Quicksand";
   color: #333;
 }
+body {
+  background-color: #ffffff;
+}
+html {
+  font-size: 62.5%;
+}
+h1 {
+font-size: 3.6rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+font-size: 2rem;
+}
+p,
+li {
+  font-size: 1.8rem;
+}
+
+.home {
+  text-align: center;
+  padding-bottom: 10rem;
+}
+.header {
+  font-size: 2.4rem;
+  margin-bottom: 9.2rem;
+}
+.header-title {
+  margin-bottom: 3.2rem;
+}
+.header-small-text {
+  font-weight: 500;
+}
 .navbar {
-  padding: 20px;
+  padding: 3rem;
   display: flex;
-  align-items: center;
-  max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  align-items: center;
+  max-width: 120rem;
+  border-bottom: 1px solid #dfdfdf;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.logo-icon {
+  fill: #396b44;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #396b44;
 }
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 16px;
+
+.nav-link {
   text-decoration: none;
-  padding: 6px;
+  margin: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 3rem;
+  font-size: 1.8rem;
 }
-.navbar a:hover {
-  color: #f1356d;
+.nav-link:hover {
+  background-color: #dee2e6;
+}
+.nav-link:active {
+  opacity: 0.8;
 }
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 120rem
 }
 
 .create {
-  max-width: 400px;
+  max-width: 40rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -46,16 +97,15 @@
   display: block;
 }
 .create h2 {
-  font-size: 20px;
   color: #f1356d;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 .create input,
 .openai textarea,
 .create select {
   width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
+  padding: 0.6px 1rem;
+  margin: 1rem 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
@@ -64,8 +114,8 @@
   background: #f1356d;
   color: #fff;
   border: 0;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
   cursor: pointer;
 }
 
@@ -73,8 +123,8 @@
   background: #f1356d;
   color: #fff;
   border: 0;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
   cursor: pointer;
 }
 .blog-list {
@@ -83,54 +133,56 @@
   justify-content: center;
 }
 
+.wrapper {
+  box-shadow: 0 0.4rem 0.8rem rgba(13, 13, 13, 0.5);
+  border: solid rgb(0, 0, 0) 0.1px;
+}
+
 .blog-list .wrapper {
-  width: 605px;
-  background: #e7e0e0;
-  border-radius: 15px;
-  padding: 30px 30px 25px;
+  max-width: 60.5rem;
+  background: #e8e9e8;
+  border-radius: 1.5rem;
+  padding: 3rem 3rem 2.5rem;
 }
 
 .blog-list .wrapper h2 {
-  font-size: 35px;
   font-weight: 600;
   text-align: center;
 }
 
 .blog-list .wrapper .home-content {
-  margin: 35px 0;
+  margin: 3.5rem 0;
 }
 
-.home-content .quote-area{
+.home-content .quote-area {
   display: flex;
   justify-content: center;
 }
 .quote-area i {
-  font-size: 15px;
+  font-size: 1rem;
 }
 .quote-area i:first-child {
-  margin: 3px 10px 0 0;
+  margin: 0.3rem 1rem 0 0;
 }
 .quote-area i:last-child {
- display: flex;
- align-items: flex-end;
- margin: 0 0 3px 10px;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 0.3rem 1rem;
 }
 .quote-area .quote {
-  font-size: 22px;
   text-align: center;
-  word-break: break-all;
 }
 
 .home-content .author {
   display: flex;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: italic;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
-.author span:first-child{
-  margin: -7px 5px 0 0;
+.author span:first-child {
+  margin: -0.7rem 0.5rem 0 0;
   font-family: monospace;
 }
 
@@ -138,10 +190,10 @@
   border-top: 1px solid #ccc;
 }
 
-.buttons .features  {
+.buttons .features {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 2rem;
   align-items: center;
 }
 .features ul {
@@ -150,31 +202,215 @@
 
 .features ul li {
   list-style: none;
-  margin: 0 5px;
+  margin: 0 0.5rem;
   display: flex;
-  height: 47px;
-  width: 47px;
-  border: 2px solid #5372F0;
+  height: 4.7rem;
+  width: 4.7rem;
+  border: 2px solid #40834e;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .features ul li:hover {
   color: #fff;
-  background: #5372F0;
+  background-color: #40834e;
 }
 .features button {
   border: none;
   outline: none;
-  background: #5372F0;
-  padding: 13px 22px;
-  border-radius: 30px;
+  background-color: #40834e;
+  padding: 1.3rem 2.2rem;
+  border-radius: 3rem;
   color: #fff;
   cursor: pointer;
-  font-style: 16px;
 }
-button.loading{
+button.loading {
   opacity: 0.7;
   pointer-events: none;
+}
+.hero-section {
+  padding-bottom: 8rem;
+}
+/* **************
+BENEFITS SECTION
+***************** */
+
+.benefits-section {
+  margin-top: 10.8rem;
+}
+
+.flex-2 {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem 5rem;
+  align-items: center;
+  background-color: rgb(245, 244, 244);
+}
+
+.benefits-header {
+  display: inline-block;
+  position: relative;
+}
+.benefits-header::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 0.2rem;
+  background-color: #396b44;
+  position: absolute;
+  bottom: -15%;
+  left: 0%;
+}
+.benefits-text {
+  padding: 3rem;
+  border-radius: 3rem;
+  
+}
+
+.benefits-section .flex-2 li {
+  line-height: 1.5;
+}
+
+.section-2 {
+padding-bottom: 8rem;
+}
+.section-1 {
+  padding-top: 8rem;
+}
+.benefits-section .flex-2 {
+  text-align: left;
+}
+
+.benefits-bold {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.benefits-section h2 {
+  margin-bottom: 5rem;
+}
+
+.benefits-section ul li:first-child {
+  margin-bottom: 30px;
+}
+.benefits-section img {
+  max-width: 45rem;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+
+.benefits-header {
+  font-size: 2.8rem;
+}
+
+/* **************
+FEATURES SECTION
+***************** */
+
+.features-section {
+  padding: 10rem 2rem 10rem;
+  background-color: #d0d9d2;
+}
+
+.features-header {
+  font-size: 2.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature-card {
+  max-width: 80rem;
+  margin: 2rem;
+  padding: 2rem;
+  border: #b7b6b6 solid 0.1px;
+  border-radius: 3rem;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:active {
+  opacity: 0.8;
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+}
+.icons {
+  margin-bottom: 10px;
+}
+
+/* **************
+HOW TO USE QUOTE GENERATOR
+***************** */
+.how-to-section {
+  margin-top: 9.6rem;
+}
+
+
+
+.flex-3 {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.quote-card {
+  border-radius: 3rem;
+  background-color: #f7f7f7fa;
+  text-align: left;
+  padding: 3rem 2rem;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #e1e1e1 solid 0.1px;
+}
+
+.quote-step {
+  background-color: #396b44;
+  color: white;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.quote-card h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.quote-text {
+  line-height: 1.25;
+  color: #666;
+}
+.quote-button:link,
+.quote-button:visited {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
 }
