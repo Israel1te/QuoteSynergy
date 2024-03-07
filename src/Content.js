@@ -73,7 +73,7 @@ const Content = ({title}) => {
                 <div className="home-content">
                     <div className="quote-area">
                         <i className="fas fa-quote-left"></i>
-                        <p className="quote">Never give up, becuase the next try might be the one which works</p>
+                        <p className="quote">Never give up, because the next try might be the one which works</p>
                         <i className="fas fa-quote-right"></i>
                     </div>
                     <div className="author">

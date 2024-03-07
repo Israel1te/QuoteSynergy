@@ -337,6 +337,7 @@ FEATURES SECTION
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .feature-card:hover {

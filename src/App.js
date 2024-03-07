@@ -4,6 +4,7 @@ import Openai from "./Openai";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/react-router-dom.min";
 import Create from "./Create";
 import NotFound from "./NotFound";
+import QuotesPage from './QuotesPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path = "/create">
             <Create />
+          </Route>
+          <Route path="/quotes">
+            <QuotesPage />
           </Route>
           <Route path = "/openai">
             <Openai/>
