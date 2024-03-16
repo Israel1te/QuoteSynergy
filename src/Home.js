@@ -193,9 +193,9 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <Link to="/openai" className="quote-button">
+        {/* <Link to="/openai" className="quote-button">
           Generate your Quote
-        </Link>
+        </Link> */}
       </section>
     </div>
   );
