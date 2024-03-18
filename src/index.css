@@ -16,14 +16,13 @@ html {
   font-size: 62.5%;
 }
 h1 {
-  font-size: 3.6rem;
+font-size: 3.6rem;
 }
 h2 {
-  font-size: 3.2rem;
-  margin: 5rem 0;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 2rem;
+font-size: 2rem;
 }
 p,
 li {
@@ -32,15 +31,17 @@ li {
 
 .home {
   text-align: center;
+  padding-bottom: 10rem;
 }
 .header {
-  margin-bottom: 5rem;
+  font-size: 2.4rem;
+  margin-bottom: 9.2rem;
 }
 .header-title {
   margin-bottom: 3.2rem;
 }
 .header-small-text {
-font-weight: 400;
+  font-weight: 500;
 }
 .navbar {
   padding: 3rem;
@@ -82,7 +83,7 @@ font-weight: 400;
 .content {
   margin: 4rem auto;
   padding: 2rem;
-  max-width: 120rem;
+  max-width: 120rem
 }
 
 .create {
@@ -138,17 +139,15 @@ font-weight: 400;
 }
 
 .blog-list .wrapper {
-max-width: 65rem;
-  margin-top: 2rem;
-  background: #f0f0f0;
+  max-width: 60.5rem;
+  background: #e8e9e8;
   border-radius: 1.5rem;
-  padding: 4rem 5rem;
+  padding: 3rem 3rem 2.5rem;
 }
 
 .blog-list .wrapper h2 {
   font-weight: 600;
   text-align: center;
-  margin:0;
 }
 
 .blog-list .wrapper .home-content {
@@ -172,7 +171,6 @@ max-width: 65rem;
 }
 .quote-area .quote {
   text-align: center;
-  line-height: 1.6;
 }
 
 .home-content .author {
@@ -217,7 +215,7 @@ max-width: 65rem;
 }
 .features ul li:hover {
   color: #fff;
-  background-color: #67a675;
+  background-color: #40834e;
 }
 .features button {
   border: none;
@@ -227,23 +225,20 @@ max-width: 65rem;
   border-radius: 3rem;
   color: #fff;
   cursor: pointer;
-  font-size: 1.6rem;
-  transition: opacity 0.3s ease;
-}
-.features button:hover {
-  opacity: .8;
 }
 button.loading {
-  opacity: 0.8;
+  opacity: 0.7;
   pointer-events: none;
 }
-
+.hero-section {
+  padding-bottom: 8rem;
+}
 /* **************
 BENEFITS SECTION
 ***************** */
 
 .benefits-section {
-  margin-top: 10rem;
+  margin-top: 10.8rem;
 }
 
 .flex-2 {
@@ -251,7 +246,7 @@ BENEFITS SECTION
   gap: 5rem;
   padding: 2rem 5rem;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: rgb(245, 244, 244);
 }
 
 .benefits-header {
@@ -271,6 +266,7 @@ BENEFITS SECTION
 .benefits-text {
   padding: 3rem;
   border-radius: 3rem;
+  
 }
 
 .benefits-section .flex-2 li {
@@ -278,7 +274,7 @@ BENEFITS SECTION
 }
 
 .section-2 {
-  padding-bottom: 8rem;
+padding-bottom: 8rem;
 }
 .section-1 {
   padding-top: 8rem;
@@ -307,6 +303,7 @@ BENEFITS SECTION
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
+
 .benefits-header {
   font-size: 2.8rem;
 }
@@ -322,7 +319,7 @@ FEATURES SECTION
 
 .features-header {
   font-size: 2.8rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3.2rem;
 }
 
 .features {
@@ -357,7 +354,6 @@ FEATURES SECTION
 
 .feature-card p {
   color: #666;
-  line-height: 1.4;
 }
 .icons {
   margin-bottom: 10px;
@@ -367,19 +363,24 @@ FEATURES SECTION
 HOW TO USE QUOTE GENERATOR
 ***************** */
 .how-to-section {
-  margin-top: 10rem;
+  margin-top: 9.6rem;
 }
+
+
+
 .flex-3 {
   display: flex;
   gap: 5rem;
-  justify-content: center;
+  padding: 2rem 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 .quote-card {
-  max-width: 35rem;
   border-radius: 3rem;
   background-color: #f7f7f7fa;
   text-align: left;
-  padding: 5rem 4rem;
+  padding: 3rem 2rem;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   border: #e1e1e1 solid 0.1px;
 }
@@ -389,9 +390,9 @@ HOW TO USE QUOTE GENERATOR
   color: white;
   display: inline-block;
   border-radius: 1rem;
-  padding: .8rem 1.2rem;
+  padding: 0.5rem 1rem;
   font-weight: bold;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.6rem;
 }
 
@@ -400,89 +401,16 @@ HOW TO USE QUOTE GENERATOR
   font-weight: bold;
 }
 .quote-text {
-  line-height: 1.4;
+  line-height: 1.25;
   color: #666;
 }
-
-/* **************
-FAQ
-***************** */
-.faq-section {
-  margin-top: 10rem;
-}
-.faq-container {
-  border-radius: 3rem;
-}
-
-.faq-title {
-  font-size: 3.2rem;
-}
-
-.faq-question h3 {
-  font-size: 2rem;
-  text-align: left;
-}
-
-.faq-answer {
-  max-width: 96rem;
-  line-height: 1.6;
+.quote-button:link,
+.quote-button:visited {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
   font-size: 1.8rem;
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-summary {
-  font-size: 2rem;
-  font-weight: 500;
-  padding: 2rem 2rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border-left: #396b44 4px solid;
-}
-
-details {
-  background-color: white;
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary:after {
-  content: "\002B";
-  color: #396b44;
-  border: 1.5px #396b44 solid;
-  border-radius: 4rem;
-  padding: 1rem 1.7rem;
-}
-
-details[open] summary {
-
-  box-shadow: none;
-}
-
-details[open] summary:after {
-  content: "\00D7";
-}
-
-details[open] .faq-answer {
-  padding: 0.5em 1em;
-
-}
-
-footer {
-  border-top: 1px solid #dfdfdf;
-  margin-top: 10rem;
-}
-
-footer p {
-  margin-top: 5rem;
-  color: rgb(103, 103, 103);
 }
