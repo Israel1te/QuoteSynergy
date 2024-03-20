@@ -29,6 +29,9 @@ const Navbar = () => {
         <Link to="/create" className="nav-link">
           Login
         </Link>
+        <Link to="/image-gen" className="nav-link">
+          ImgGen (provisional)
+        </Link>
       </div>
     </nav>
   );

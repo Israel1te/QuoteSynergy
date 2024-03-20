@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/reac
 import Create from "./Create";
 import NotFound from "./NotFound";
 
+import ImgGen from "./ImgGen";
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route path = "/openai">
             <Openai/>
+          </Route>
+          <Route path = "/image-gen">
+            <ImgGen/>
           </Route>
           <Route path="*">
             <NotFound />
