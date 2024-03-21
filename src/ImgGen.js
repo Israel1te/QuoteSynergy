@@ -23,11 +23,13 @@ for example purposes
 */
 
 import React, { useState, useEffect, useRef } from 'react';
+import config from "./config.json";
 
 const QuoteGenerator = ({ setQuote, setAuthor }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [quoteData, setQuoteData] = useState(null);
   const containerRef = useRef(null);
+  
 
   useEffect(() => {
     fetchRandomQuote();
@@ -94,9 +96,11 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
   const [fontColor, setFontColor] = useState('#ffffff');
   const [textPosition, setTextPosition] = useState(50); // Initial position
   const canvasRef = useRef(null);
+  const pexelsApiKey = config.pexelsApiKey;
 
   useEffect(() => {
     fetchRandomImage();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [authorName, setAuthorName] = useState('');
@@ -107,7 +111,7 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
     try {
       const response = await fetch('https://api.pexels.com/v1/search?query=nature&per_page=1&page=' + Math.floor(Math.random() * 10) + 1, {
         headers: {
-          Authorization: 'YOUR_PEXELS_API_KEY'
+          Authorization: pexelsApiKey
         }
       });
       const data = await response.json();
