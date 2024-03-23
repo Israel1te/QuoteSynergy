@@ -1,5 +1,5 @@
 import React from "react";
-import OpenAI from "openai";
+import OpenAI from "./Openai";
 import config from "./config.json";
 
 const Openai = () => {

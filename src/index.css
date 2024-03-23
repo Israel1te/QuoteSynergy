@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts-googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-/* base styles */
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -30,24 +33,36 @@ li {
   font-size: 1.8rem;
 }
 
+.content {
+  margin: auto;
+}
 .home {
   text-align: center;
 }
-.header {
-  margin-bottom: 5rem;
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 2rem 5rem;
+  align-items: center;
 }
-.header-title {
-  margin-bottom: 3.2rem;
+
+.flex-3 {
+  display: flex;
+  padding: 2rem 5rem;
+  gap: 5rem;
+  justify-content: center;
 }
-.header-small-text {
-font-weight: 400;
-}
+
+/* ------------------------ */
+/* NAVBAR STYLES */
+/* ------------------------ */
 .navbar {
   padding: 3rem;
   display: flex;
   margin: 0 auto;
   align-items: center;
-  max-width: 120rem;
   border-bottom: 1px solid #dfdfdf;
   justify-content: space-between;
 }
@@ -79,53 +94,30 @@ font-weight: 400;
 .nav-link:active {
   opacity: 0.8;
 }
-.content {
-  margin: 4rem auto;
-  padding: 2rem;
-  max-width: 120rem;
+
+/* ------------------------ */
+/* HERO STYLES */
+/* ------------------------ */
+
+.header {
+  margin-bottom: 5rem;
 }
 
-.create {
-  max-width: 40rem;
+.hero-section {
+  padding: 10rem 2rem 10rem;
+}
+.hero-container {
+  max-width: 130rem;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 5rem;
 }
-.create label,
-.openai label {
-  text-align: left;
-  display: block;
+.header-title {
+  margin-bottom: 3.2rem;
 }
-.create h2 {
-  color: #f1356d;
-  margin-bottom: 3rem;
-}
-.create input,
-.openai textarea,
-.create select {
-  width: 100%;
-  padding: 0.6px 1rem;
-  margin: 1rem 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-.create button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  cursor: pointer;
+.header-small-text {
+  font-weight: 400;
 }
 
-.openai button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  cursor: pointer;
-}
 .blog-list {
   display: flex;
   align-items: center;
@@ -138,7 +130,7 @@ font-weight: 400;
 }
 
 .blog-list .wrapper {
-max-width: 65rem;
+  max-width: 65rem;
   margin-top: 2rem;
   background: #f0f0f0;
   border-radius: 1.5rem;
@@ -148,7 +140,7 @@ max-width: 65rem;
 .blog-list .wrapper h2 {
   font-weight: 600;
   text-align: center;
-  margin:0;
+  margin: 0;
 }
 
 .blog-list .wrapper .home-content {
@@ -198,6 +190,7 @@ max-width: 65rem;
   margin-top: 2rem;
   align-items: center;
 }
+
 .features ul {
   display: flex;
 }
@@ -208,7 +201,7 @@ max-width: 65rem;
   display: flex;
   height: 4.7rem;
   width: 4.7rem;
-  border: 2px solid #40834e;
+  border: 2px solid #396b44;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -222,7 +215,7 @@ max-width: 65rem;
 .features button {
   border: none;
   outline: none;
-  background-color: #40834e;
+  background-color: #396b44;
   padding: 1.3rem 2.2rem;
   border-radius: 3rem;
   color: #fff;
@@ -231,27 +224,25 @@ max-width: 65rem;
   transition: opacity 0.3s ease;
 }
 .features button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 button.loading {
   opacity: 0.8;
   pointer-events: none;
 }
 
-/* **************
-BENEFITS SECTION
-***************** */
+/* ------------------------ */
+/* BENEFITS STYLES */
+/* ------------------------ */
 
 .benefits-section {
-  margin-top: 10rem;
+  background-color: #f0f0f0;
 }
 
-.flex-2 {
-  display: flex;
-  gap: 5rem;
-  padding: 2rem 5rem;
-  align-items: center;
-  background-color: #f0f0f0;
+.benefits-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .benefits-header {
@@ -265,25 +256,25 @@ BENEFITS SECTION
   height: 0.2rem;
   background-color: #396b44;
   position: absolute;
-  bottom: -15%;
+  bottom: -20%;
   left: 0%;
 }
 .benefits-text {
-  padding: 3rem;
+  padding: 3rem 3rem 0rem 3rem;
   border-radius: 3rem;
 }
 
-.benefits-section .flex-2 li {
+.benefits-section .grid-2 li {
   line-height: 1.5;
 }
 
 .section-2 {
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 .section-1 {
   padding-top: 8rem;
 }
-.benefits-section .flex-2 {
+.benefits-section .grid-2 {
   text-align: left;
 }
 
@@ -301,7 +292,7 @@ BENEFITS SECTION
   margin-bottom: 30px;
 }
 .benefits-section img {
-  max-width: 45rem;
+  max-width: 80%;
   height: auto;
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -309,15 +300,22 @@ BENEFITS SECTION
 
 .benefits-header {
   font-size: 2.8rem;
+  margin-top: 0;
 }
 
-/* **************
-FEATURES SECTION
-***************** */
+/* ------------------------ */
+/* FEATURES STYLES */
+/* ------------------------ */
 
 .features-section {
   padding: 10rem 2rem 10rem;
   background-color: #d0d9d2;
+}
+
+.features-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .features-header {
@@ -328,12 +326,14 @@ FEATURES SECTION
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-card {
   max-width: 80rem;
-  margin: 2rem;
-  padding: 2rem;
+  padding: 3rem;
   border: #b7b6b6 solid 0.1px;
   border-radius: 3rem;
   background-color: #ffffff;
@@ -360,20 +360,22 @@ FEATURES SECTION
   line-height: 1.4;
 }
 .icons {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-/* **************
-HOW TO USE QUOTE GENERATOR
-***************** */
+/* ------------------------ */
+/* HOW-TO STYLES */
+/* ------------------------ */
+
 .how-to-section {
   margin-top: 10rem;
+  padding: 0rem 2rem;
 }
-.flex-3 {
-  display: flex;
-  gap: 5rem;
-  justify-content: center;
+.how-to-container {
+  max-width: 130rem;
+  margin: 0 auto;
 }
+
 .quote-card {
   max-width: 35rem;
   border-radius: 3rem;
@@ -389,7 +391,7 @@ HOW TO USE QUOTE GENERATOR
   color: white;
   display: inline-block;
   border-radius: 1rem;
-  padding: .8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   font-weight: bold;
   margin-bottom: 2.5rem;
   font-size: 1.6rem;
@@ -404,22 +406,20 @@ HOW TO USE QUOTE GENERATOR
   color: #666;
 }
 
-/* **************
-FAQ
-***************** */
+/* ------------------------ */
+/* FAQ STYLES */
+/* ------------------------ */
 .faq-section {
   margin-top: 10rem;
 }
-.faq-container {
-  border-radius: 3rem;
-}
 
-.faq-title {
-  font-size: 3.2rem;
+.faq-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .faq-question h3 {
-  font-size: 2rem;
   text-align: left;
 }
 
@@ -439,6 +439,7 @@ summary {
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 2rem;
   justify-content: space-between;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -464,7 +465,6 @@ summary:after {
 }
 
 details[open] summary {
-
   box-shadow: none;
 }
 
@@ -474,15 +474,45 @@ details[open] summary:after {
 
 details[open] .faq-answer {
   padding: 0.5em 1em;
-
 }
+
+/* ------------------------ */
+/* FOOTER STYLES */
+/* ------------------------ */
 
 footer {
   border-top: 1px solid #dfdfdf;
   margin-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 footer p {
   margin-top: 5rem;
   color: rgb(103, 103, 103);
+}
+
+/* ------------------------ */
+/* GENERATE STYLES */
+/* ------------------------ */
+.openai textarea {
+  width: 100%;
+  padding: 0.6px 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.openai label {
+  text-align: left;
+  display: block;
+}
+
+.openai button {
+  background: #396b44;
+  color: #fff;
+  border: 0;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
 }
