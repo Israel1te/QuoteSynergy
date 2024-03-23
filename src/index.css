@@ -494,13 +494,26 @@ footer p {
 /* ------------------------ */
 /* GENERATE STYLES */
 /* ------------------------ */
+.openai {
+  margin-left: 5rem;
+}
+
 .openai textarea {
-  width: 100%;
-  padding: 0.6px 1rem;
-  margin: 1rem 0;
+  width: 60%;
+  font-size: 1.8rem;
+  height: auto;
+  padding: 1rem;
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
+  overflow: hidden;
+}
+textarea:focus {
+  outline: none;
+}
+
+.promptInput {
+  margin-bottom: 2rem;
 }
 
 .openai label {
@@ -511,8 +524,24 @@ footer p {
 .openai button {
   background: #396b44;
   color: #fff;
-  border: 0;
-  padding: 0.8rem;
+  border: none;
+  padding: 1.3rem 2.2rem;
   border-radius: 0.8rem;
   cursor: pointer;
+  border-radius: 3rem;
+  transition: opacity 0.3s ease;
+}
+
+
+.openai button:hover {
+  opacity: 0.8;
+}
+
+.openai button:active {
+  opacity: 0.6;
+}
+
+#responseArea {
+  font-size: 1.8rem;
+  margin-top: 2rem;
 }
