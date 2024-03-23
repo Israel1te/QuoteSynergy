@@ -1,9 +1,4 @@
-[
-    {
-        "openaiApiKey": "69"
-    },
-    
-    {
-        "pexelsApiKey": "abcd"
-    }
-]
+{
+    "openaiApiKey": "",
+    "pexelsApiKey": ""
+}
