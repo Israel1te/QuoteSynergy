@@ -10,6 +10,8 @@ import "./queries.css";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/react-router-dom.min";
 import NotFound from "./NotFound";
 
+import ImgGen from "./ImgGen";
+
 function App() {
   return (
     <Router>
@@ -35,10 +37,13 @@ function App() {
             <Route path="/blog/post3">
               <BlogPost3 />
             </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
+          <Route path = "/image-gen">
+            <ImgGen/>
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
         </div>
       </div>
     </Router>
