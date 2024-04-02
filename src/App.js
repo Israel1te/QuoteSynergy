@@ -2,9 +2,9 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Openai from "./Openai";
 import BlogMainPage from "./BlogMainPage";
-import BlogPost1 from "./BlogPost1";
-import BlogPost2 from "./BlogPost2";
-import BlogPost3 from "./BlogPost3";
+import BlogPost1 from "./blogs/BlogPost1";
+import BlogPost2 from "./blogs/BlogPost2";
+import BlogPost3 from "./blogs/BlogPost3";
 import "./queries.css";
 
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/react-router-dom.min";

@@ -45,7 +45,6 @@ li {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   padding: 2rem 5rem;
-  align-items: center;
 }
 
 .flex-3 {
@@ -403,7 +402,8 @@ button.loading {
 }
 .quote-text {
   line-height: 1.4;
-  color: #666;
+  color: #4f4f4f;
+  text-align: left;
 }
 
 /* ------------------------ */
@@ -495,7 +495,9 @@ footer p {
 /* GENERATE STYLES */
 /* ------------------------ */
 .openai {
-  margin-left: 5rem;
+  padding: 0 5rem;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .openai textarea {
@@ -516,11 +518,6 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
-.openai label {
-  text-align: left;
-  display: block;
-}
-
 .openai button {
   background: #396b44;
   color: #fff;
@@ -532,7 +529,6 @@ textarea:focus {
   transition: opacity 0.3s ease;
 }
 
-
 .openai button:hover {
   opacity: 0.8;
 }
@@ -540,12 +536,30 @@ textarea:focus {
 .openai button:active {
   opacity: 0.6;
 }
+textarea {
+  margin: 0 auto;
+  border-radius: 1rem;
+}
 
 #responseArea {
   font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.tone-selector {
+  margin-bottom: 20px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container {
+  display: flex;
+}
+select {
   margin-top: 2rem;
-<<<<<<< HEAD
-=======
   padding: 1rem;
   font-size: 1.8rem;
   border: 1px solid #ccc;
@@ -649,7 +663,6 @@ select:focus {
 
 .fas {
   font-size: 1.5rem;
->>>>>>> 6316cd2 (Steps Section Added)
 }
 /* GENERATE */
 

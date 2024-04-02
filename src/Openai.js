@@ -4,9 +4,9 @@ import config from "./config.json";
 
 const Openai = () => {
   const [prompt, setPrompt] = useState("");
+  const [numberInput, setNumberInput] = useState(0);
+  const [selectedTone, setSelectedTone] = useState("neutral");
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-=======
   const [quotes, setQuotes] = useState([]);
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -16,12 +16,19 @@ const Openai = () => {
     const utterance = new SpeechSynthesisUtterance(text);
     synth.speak(utterance);
   };
->>>>>>> 6316cd2 (Steps Section Added)
 
   const handleInputChange = (event) => {
     setPrompt(event.target.value);
     event.target.style.height = "auto";
     event.target.style.height = event.target.scrollHeight + "px";
+  };
+
+  const handleNumberInputChange = (event) => {
+    setNumberInput(event.target.value);
+  };
+
+  const handleToneChange = (event) => {
+    setSelectedTone(event.target.value);
   };
 
   const generateResponse = async () => {
@@ -34,6 +41,21 @@ const Openai = () => {
     setLoading(true);
 
     try {
+      let tonePrompt = "";
+
+      const toneInstructions = {
+        neutral: "Write in a neutral tone.",
+        friendly: "Write in a friendly and approachable tone.",
+        inspirational: "Provide inspirational and motivational quotes.",
+        relaxed: "Write in a relaxed and laid-back tone.",
+        funny: "Inject humor and make the quotes funny.",
+        professional: "Maintain a professional and formal tone.",
+        witty: "Inject wit and cleverness into the responses.",
+        adventurous: "Provide adventurous and daring quotes.",
+      };
+
+      tonePrompt += toneInstructions[selectedTone];
+
       const response = await openai.chat.completions.create({
         messages: [
           { role: "system", content: "You are a helpful assistant." },
@@ -42,14 +64,20 @@ const Openai = () => {
             role: "assistant",
             content: "The Los Angeles Dodgers won the World Series in 2020.",
           },
+          {
+            role: "system",
+            content: `You take the user input and then give them ${numberInput} quotes about the topic they give you with ${selectedTone} tone.`,
+          },
           { role: "user", content: prompt },
+          { role: "assistant", content: tonePrompt },
         ],
         model: "gpt-3.5-turbo",
       });
 
-      document.getElementById("responseArea").innerText =
-        response.choices[0].message.content;
-      console.log(response.choices[0]);
+      const quoteSets = response.choices[0].message.content.split("\n");
+
+      const cleanQuoteSets = quoteSets.filter((set) => set.trim() !== "");
+      setQuotes(cleanQuoteSets);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -59,27 +87,6 @@ const Openai = () => {
 
   return (
     <div className="openai">
-<<<<<<< HEAD
-      <h2>AI Quote Generator</h2>
-      <p className="promptInput">Please enter your prompt below:</p>
-      <textarea
-        id="promptInput"
-        rows="4"
-        cols="50"
-        value={prompt}
-        onChange={handleInputChange}
-        style={{ height: "auto" }}
-        placeholder="Type your prompt here..."
-      ></textarea>
-      <br />
-      <br />
-      <button onClick={generateResponse} className={loading ? "loading" : ""}>
-        {loading ? "Loading..." : "Submit"}
-      </button>
-      <br />
-      <br />
-      <div id="responseArea"></div>
-=======
       <div className="generator-container">
         <h2>AI Quote Generator</h2>
         <p className="promptInput">Please enter your prompt below:</p>
@@ -177,7 +184,6 @@ const Openai = () => {
           </div>
         </div>
       </section>
->>>>>>> 6316cd2 (Steps Section Added)
     </div>
   );
 };
