@@ -559,7 +559,6 @@ textarea {
 }
 select {
   margin-top: 2rem;
-  width: 20rem;
   padding: 1rem;
   font-size: 1.8rem;
   border: 1px solid #ccc;
@@ -614,9 +613,10 @@ select:focus {
 
 .input-container {
   display: flex;
-  align-items: center;
+  align-items:  baseline;
   gap: 5rem;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .input-container label {
@@ -630,15 +630,17 @@ select:focus {
   background-color: #fff;
   border-radius: 5px;
   font-size: 1.8rem;
+  padding: 1rem;
 }
 .tone-container {
   display: flex;
   gap: 2rem;
-  align-items: center;
+align-items: baseline;
 }
 .amount-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+
   gap: 2rem;
 }
 .quote-container button {
