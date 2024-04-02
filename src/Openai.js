@@ -7,6 +7,7 @@ const Openai = () => {
   const [numberInput, setNumberInput] = useState(0);
   const [selectedTone, setSelectedTone] = useState("neutral");
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const [quotes, setQuotes] = useState([]);
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -16,6 +17,8 @@ const Openai = () => {
     const utterance = new SpeechSynthesisUtterance(text);
     synth.speak(utterance);
   };
+=======
+>>>>>>> parent of 04eaff9 (Steps Section Added)
 
   const handleInputChange = (event) => {
     setPrompt(event.target.value);
@@ -87,6 +90,7 @@ const Openai = () => {
 
   return (
     <div className="openai">
+<<<<<<< HEAD
       <div className="generator-container">
         <h2>AI Quote Generator</h2>
         <p className="promptInput">Please enter your prompt below:</p>
@@ -184,6 +188,27 @@ const Openai = () => {
           </div>
         </div>
       </section>
+=======
+      <h2>AI Quote Generator</h2>
+      <p className="promptInput">Please enter your prompt below:</p>
+      <textarea
+        id="promptInput"
+        rows="4"
+        cols="50"
+        value={prompt}
+        onChange={handleInputChange}
+        style={{ height: "auto" }}
+        placeholder="Type your prompt here..."
+      ></textarea>
+      <br />
+      <br />
+      <button onClick={generateResponse} className={loading ? "loading" : ""}>
+        {loading ? "Loading..." : "Submit"}
+      </button>
+      <br />
+      <br />
+      <div id="responseArea"></div>
+>>>>>>> parent of 04eaff9 (Steps Section Added)
     </div>
   );
 };

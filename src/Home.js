@@ -190,7 +190,8 @@ const Home = () => {
               <p className="quote-step">Step 2</p>
               <h3>Select Preference</h3>
               <p className="quote-text">
-                Fine-tune your experience by adjusting the tone of the quotes.
+                Fine-tune your experience by adjusting preferences like tone,
+                length, and theme for quotes that resonate with you.
               </p>
             </div>
 

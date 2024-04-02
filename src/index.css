@@ -560,6 +560,7 @@ textarea {
 }
 select {
   margin-top: 2rem;
+<<<<<<< HEAD
   padding: 1rem;
   font-size: 1.8rem;
   border: 1px solid #ccc;
@@ -686,4 +687,6 @@ select:focus {
   text-align: center;
   max-width: 30rem;
   color: #606060;
+=======
+>>>>>>> parent of 04eaff9 (Steps Section Added)
 }
