@@ -11,11 +11,11 @@ const Openai = () => {
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
   };
-    const speakQuote = (text) => {
-      const synth = window.speechSynthesis;
-      const utterance = new SpeechSynthesisUtterance(text);
-      synth.speak(utterance);
-    };
+  const speakQuote = (text) => {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
+  };
 
   const handleInputChange = (event) => {
     setPrompt(event.target.value);
@@ -160,33 +160,26 @@ const Openai = () => {
       </div>
       <section>
         <div className="how-to-container">
-          <h2>How to use Quote Generator</h2>
+          <h2>Generate Quotes in 3 Simple Steps!</h2>
           <div className="flex-3">
-            <div className="quote-card">
-              <p className="quote-step">Step 1</p>
-              <h3>Describe Quote</h3>
-              <p className="quote-text">
-                Input keywords to reflect your mood or interests, and our AI
-                generates personalized quotes to inspire you.
+            <div className="generate-card">
+              <p className="generate-step">1</p>
+
+              <p className="generate-text">
+                Input a quote topic that resonates with you
               </p>
             </div>
-            <div className="quote-card">
-              <p className="quote-step">Step 2</p>
-              <h3>Select Preference</h3>
-              <p className="quote-text">
-                Fine-tune your experience by adjusting preferences like tone,
-                length, and theme for quotes that resonate with you.
+            <div className="generate-card">
+              <p className=" generate-step">2</p>
+              <p className="generate-text">
+                Select the tone of the quote and how many quotes you want to
+                output
               </p>
             </div>
 
-            <div className="quote-card">
-              <p className="quote-step">Step 3</p>
-              <h3>Embrace Inpsiration</h3>
-              <p className="quote-text">
-                Once you've found the perfect quote, share it on social media or
-                keep it as a personal mantra to uplift your day. Let the power
-                of words inspire you.
-              </p>
+            <div className="generate-card">
+              <p className="generate-step">3</p>
+              <p className="generate-text">Click the generate button</p>
             </div>
           </div>
         </div>

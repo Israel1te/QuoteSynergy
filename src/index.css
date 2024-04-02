@@ -579,10 +579,6 @@ select:focus {
 .tone-selector {
   font-size: 1.8rem;
 }
-
-/* Openai.css */
-
-/* Style for the container of each quote */
 .quote-container {
   display: flex;
   margin-bottom: 2rem;
@@ -600,7 +596,7 @@ select:focus {
   text-align: center;
 }
 .generator-container {
-  margin-top: 9.6rem;
+  margin-top: 10rem;
   text-align: center;
   background-color: #f7f7f7fa;
   border: solid 1px black;
@@ -608,11 +604,12 @@ select:focus {
   padding: 5rem 4rem;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   border: #e1e1e1 solid;
+  margin-bottom: 10rem;
 }
 
 .input-container {
   display: flex;
-  align-items:  baseline;
+  align-items: baseline;
   gap: 5rem;
   justify-content: center;
   margin-bottom: 2rem;
@@ -634,7 +631,7 @@ select:focus {
 .tone-container {
   display: flex;
   gap: 2rem;
-align-items: baseline;
+  align-items: baseline;
 }
 .amount-container {
   display: flex;
@@ -666,4 +663,27 @@ align-items: baseline;
 
 .fas {
   font-size: 1.5rem;
+}
+/* GENERATE */
+
+.generate-step {
+  display: flex;
+ margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #396b44;
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  max-width: 6rem;
+  height: 6rem;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.generate-text {
+  text-align: center;
+  max-width: 30rem;
+  color: #606060;
 }
