@@ -402,7 +402,8 @@ button.loading {
 }
 .quote-text {
   line-height: 1.4;
-  color: #666;
+  color: #4f4f4f;
+  text-align: left;
 }
 
 /* ------------------------ */
@@ -589,12 +590,10 @@ select:focus {
   background-color: white;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   border: #c4c4c4 solid;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 3rem;
-}
-
-.quote-container p {
-  text-align: left;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .how-to-container h2 {
@@ -648,7 +647,7 @@ align-items: baseline;
   border: #396b44 2px solid;
   height: 4.7rem;
   width: 4.7rem;
-  margin-left: 2rem;
+
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -656,6 +655,15 @@ align-items: baseline;
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
 .quote-container button:hover {
   background-color: #67a675;
+}
+
+.fas {
+  font-size: 1.5rem;
 }

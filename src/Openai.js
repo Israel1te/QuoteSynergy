@@ -11,6 +11,11 @@ const Openai = () => {
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
   };
+    const speakQuote = (text) => {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    };
 
   const handleInputChange = (event) => {
     setPrompt(event.target.value);
@@ -140,10 +145,15 @@ const Openai = () => {
           {quotes.map((quote) => (
             <div className="quote-container" key={quote}>
               <div className="quote-text">{quote}</div>
-              <button onClick={() => copyToClipboard(quote)}>
-                {" "}
-                <i className="fas fa-copy"></i>
-              </button>
+              <div className="btn-container">
+                <button onClick={() => copyToClipboard(quote)}>
+                  {" "}
+                  <i className="fas fa-copy"></i>
+                </button>
+                <button onClick={() => speakQuote(quote)}>
+                  <i className="fas fa-volume-up"></i>
+                </button>
+              </div>
             </div>
           ))}
         </div>
