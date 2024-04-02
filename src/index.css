@@ -544,4 +544,133 @@ textarea:focus {
 #responseArea {
   font-size: 1.8rem;
   margin-top: 2rem;
+<<<<<<< HEAD
+=======
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
+}
+
+.tone-selector {
+  font-size: 1.8rem;
+}
+.quote-container {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #c4c4c4 solid;
+  padding: 3rem;
+  border-radius: 3rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.how-to-container h2 {
+  text-align: center;
+}
+.generator-container {
+  margin-top: 10rem;
+  text-align: center;
+  background-color: #f7f7f7fa;
+  border: solid 1px black;
+  border-radius: 3rem;
+  padding: 5rem 4rem;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #e1e1e1 solid;
+  margin-bottom: 10rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: baseline;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input-container label {
+  font-size: 1.8rem;
+}
+
+#promptInput2 {
+  max-width: 10rem;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.tone-container {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+.amount-container {
+  display: flex;
+  align-items: baseline;
+
+  gap: 2rem;
+}
+.quote-container button {
+  background-color: white;
+  border: #396b44 2px solid;
+  height: 4.7rem;
+  width: 4.7rem;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.quote-container button:hover {
+  background-color: #67a675;
+}
+
+.fas {
+  font-size: 1.5rem;
+>>>>>>> 6316cd2 (Steps Section Added)
+}
+/* GENERATE */
+
+.generate-step {
+  display: flex;
+ margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #396b44;
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  max-width: 6rem;
+  height: 6rem;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.generate-text {
+  text-align: center;
+  max-width: 30rem;
+  color: #606060;
 }
