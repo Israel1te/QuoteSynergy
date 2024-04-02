@@ -45,7 +45,6 @@ const Openai = () => {
         relaxed: "Write in a relaxed and laid-back tone.",
         funny: "Inject humor and make the quotes funny.",
         professional: "Maintain a professional and formal tone.",
-        bold: "Be bold and assertive in the responses.",
         witty: "Inject wit and cleverness into the responses.",
         adventurous: "Provide adventurous and daring quotes.",
       };
@@ -124,7 +123,6 @@ const Openai = () => {
                 <option value="relaxed">Relaxed</option>
                 <option value="funny">Funny</option>
                 <option value="professional">Professional</option>
-                <option value="bold">Bold</option>
                 <option value="witty">Witty</option>
                 <option value="adventurous">Adventurous</option>
               </select>
