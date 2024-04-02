@@ -87,6 +87,57 @@ const Openai = () => {
 
   return (
     <div className="openai">
+      <section className="hero-section">
+        <div className="hero-container hero2">
+          <h1>
+            Envision, Create, Inspire: Let QuoteSynergy's AI Quote Generator
+            Spark Your Imagination!
+          </h1>
+          <p className="hero2-text">
+            Create beautiful and easily shareable quote images within seconds.
+          </p>
+          <div>
+            <div className="generate-flex3">
+              <div className="generate-flex2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#666"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+                <p className="check-text">No credit card required</p>
+              </div>
+              <div className="generate-flex2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#666"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+                <p className="check-text">No signup required</p>
+              </div>
+              <div className="generate-flex2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#666"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                </svg>
+                <p className="check-text">Endless quotes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="generator-container">
         <h2>AI Quote Generator</h2>
         <p className="promptInput">Please enter your prompt below:</p>
@@ -159,7 +210,7 @@ const Openai = () => {
         </div>
       </div>
       <section>
-        <div className="how-to-container">
+        <div className="steps-container">
           <h2>Generate Quotes in 3 Simple Steps!</h2>
           <div className="flex-3">
             <div className="generate-card">
@@ -184,6 +235,9 @@ const Openai = () => {
           </div>
         </div>
       </section>
+      <footer>
+        <p>Copyright © 2024 QuoteSynergy. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
