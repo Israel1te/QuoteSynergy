@@ -1,4 +1,3 @@
-// TODO: Add integration to podcast platforms to embed motivational podcasts etc.
 // TODO: Refine webpage CSS to make it look more appealing/modern
 // TODO: Investigate unintended carousel behavior caused by window resizing
 
@@ -9,10 +8,48 @@ import Slider from 'react-slick'; // Import react-slick
 import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
 import 'slick-carousel/slick/slick-theme.css'; // Import slick carousel theme CSS
 
+const PodcastCarousel = ({ podcasts, onPodcastClick }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <Slider {...settings}>
+      {podcasts.map((podcast) => (
+        <div key={podcast.id} onClick={() => onPodcastClick(podcast)} style={styles.podcastItem}>
+          <img src={podcast.thumbnail} alt={podcast.title} style={styles.podcastThumbnail} />
+          <p>{podcast.title}</p>
+        </div>
+      ))}
+    </Slider>
+  );
+};
+
 const CuratedGallery = () => {
   const [videoData, setVideoData] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('motivational');
+  const [podcasts, setPodcasts] = useState([]);
+  const [selectedPodcast, setSelectedPodcast] = useState(null);
 
   useEffect(() => {
     // Function to fetch video data from JSON file
@@ -26,6 +63,18 @@ const CuratedGallery = () => {
     };
 
     fetchVideoData();
+
+    // Function to fetch podcast data from JSON file
+    const fetchPodcasts = async () => {
+      try {
+        const response = await axios.get('/curated-content/podcasts.json');
+        setPodcasts(response.data);
+      } catch (error) {
+        console.error('Error fetching podcasts:', error);
+      }
+    };
+
+    fetchPodcasts();
   }, []);
 
   const handleClick = (videoUrl) => {
@@ -34,6 +83,10 @@ const CuratedGallery = () => {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+  };
+
+  const handlePodcastClick = (podcast) => {
+    setSelectedPodcast(podcast);
   };
 
   return (
@@ -99,13 +152,35 @@ const CuratedGallery = () => {
                   src={`https://img.youtube.com/vi/${videoUrl.split('v=')[1]}/0.jpg`}
                   alt={`Thumbnail ${index}`}
                   onClick={() => handleClick(videoUrl)}
-                  style={styles.thumbnail}
+                  style={{
+                    ...styles.thumbnail,
+                    width: '200px', // Set a fixed width for the thumbnails (adjust as needed)
+                    height: 'auto', // Maintain aspect ratio
+                  }}
                 />
               </div>
             ))}
           </Slider>
         )}
       </div>
+
+        {/* Selected podcast */}
+        {selectedPodcast && (
+        <div style={styles.selectedPodcastContainer}>
+          <div dangerouslySetInnerHTML={{ __html: selectedPodcast.embedCode }} />
+        </div>
+      )}
+
+      {/* Podcast Carousel */}
+      <div style={styles.podcastCarouselWrapper}>
+        <h2 style={styles.carouselHeader}>Featured Podcasts</h2>
+        {podcasts.length > 0 && (
+          <PodcastCarousel podcasts={podcasts} onPodcastClick={handlePodcastClick} />
+        )}
+      </div>
+
+
+
     </div>
   );
 };
@@ -142,7 +217,7 @@ const carouselSettings = {
 
 const styles = {
   container: {
-    position: 'relative', // Make sure the title container is positioned relative to this container
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -153,7 +228,7 @@ const styles = {
   },
   titleContainer: {
     position: 'absolute',
-    top: '-65px', // Adjust position relative to the outer container
+    top: '-65px',
     left: '20px',
     backgroundColor: '#fff',
     padding: '10px',
@@ -179,12 +254,13 @@ const styles = {
     borderRadius: '4px',
   },
   toggleLabel: {
-    marginRight: '10px', // Add space between radio menu entries
+    marginRight: '10px',
   },
   videoContainer: {
     marginTop: '20px',
     marginBottom: '20px',
-    width: '57%', // Should look into adjusting this value to change the size of the embeded video (make it to a set px val rather than scaling?)
+    width: '100%',
+    maxWidth: '800px',
     height: '500px',
     textAlign: 'center',
     backgroundColor: '#f7f7f7',
@@ -196,6 +272,44 @@ const styles = {
     maxWidth: '800px',
     padding: '40px',
     backgroundColor: '#f7f7f7',
+    borderRadius: '8px',
+  },
+  podcastCarouselWrapper: {
+    width: '100%',
+    maxWidth: '800px',
+    padding: '40px',
+    backgroundColor: '#f7f7f7',
+    borderRadius: '8px',
+    marginTop: '20px',
+  },
+  podcastCarouselContainer: {
+    display: 'flex',
+    overflowX: 'auto',
+    padding: '10px 0',
+    margin: '0 -10px',
+  },
+  podcastItem: {
+    flex: '0 0 auto',
+    margin: '0 10px',
+    textAlign: 'center',
+  },
+  podcastThumbnail: {
+    maxWidth: '100px',
+    maxHeight: '100px',
+    width: 'auto',
+    height: 'auto',
+    cursor: 'pointer',
+    textAlign: 'center'
+  },
+  selectedPodcastContainer: {
+    marginTop: '20px',
+    marginBottom: '20px',
+    width: '100%',
+    maxWidth: '800px',
+    height: '320px',
+    textAlign: 'center',
+    backgroundColor: '#f7f7f7',
+    border: '2px solid #ccc',
     borderRadius: '8px',
   },
   carouselHeader: {
@@ -212,7 +326,6 @@ const styles = {
     justifyContent: 'center',
   },
   thumbnail: {
-    width: '90%',
     cursor: 'pointer',
     borderRadius: '4px',
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',

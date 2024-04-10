@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link to="/image-gen" className="nav-link">
           ImgGen
         </Link>
-        <Link to="/curated-gallery" classname="nav-link">
+        <Link to="/curated-gallery" className="nav-link">
           Curated Content
         </Link>
       </div>
