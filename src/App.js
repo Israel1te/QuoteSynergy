@@ -6,6 +6,7 @@ import Create from "./Create";
 import NotFound from "./NotFound";
 
 import ImgGen from "./ImgGen";
+import CuratedGallery from "./CuratedGallery";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path = "/image-gen">
             <ImgGen/>
+          </Route>
+          <Route path = "/curated-gallery">
+            <CuratedGallery/>
           </Route>
           <Route path="*">
             <NotFound />

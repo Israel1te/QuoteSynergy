@@ -234,7 +234,7 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
         </label>
         <label style={{ marginRight: '10px' }}>
           Vertical Text Position:
-          <input type="range" min="0" max="100" value={textPosition} onChange={handleTextPositionChange} style={{ margin: '10px' }} />
+          <input type="range" min="35" max="65" value={textPosition} onChange={handleTextPositionChange} style={{ margin: '10px' }} />
           <span>{textPosition}</span>
         </label>
       </div>

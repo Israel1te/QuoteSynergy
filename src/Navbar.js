@@ -30,7 +30,10 @@ const Navbar = () => {
           Login
         </Link>
         <Link to="/image-gen" className="nav-link">
-          ImgGen (provisional)
+          ImgGen
+        </Link>
+        <Link to="/curated-gallery" classname="nav-link">
+          Curated Content
         </Link>
       </div>
     </nav>
