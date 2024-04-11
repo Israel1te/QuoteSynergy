@@ -488,9 +488,10 @@ footer {
   padding-bottom: 10rem;
 }
 
+
 footer p {
   margin-top: 5rem;
-  text-align: center;
+text-align: center;
   color: rgb(103, 103, 103);
 }
 
@@ -498,8 +499,6 @@ footer p {
 /* GENERATE STYLES */
 /* ------------------------ */
 .openai {
-  padding: 0 5rem;
-  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -520,7 +519,9 @@ textarea:focus {
 .promptInput {
   margin-bottom: 2rem;
 }
-
+.generator-container button {
+  font-size: 1.8rem;
+}
 .openai button {
   background: #396b44;
   color: #fff;
@@ -600,6 +601,7 @@ select:focus {
 }
 .generator-container {
   text-align: center;
+  margin: 0 auto;
   background-color: #f7f7f7fa;
   border: solid 1px black;
   border-radius: 3rem;
@@ -607,6 +609,7 @@ select:focus {
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   border: #e1e1e1 solid;
   margin-bottom: 10rem;
+  max-width: 90rem;
 }
 
 .input-container {
@@ -666,7 +669,6 @@ select:focus {
 .fas {
   font-size: 1.5rem;
 }
-/* GENERATE */
 .steps-container .flex-3 {
 gap: 10rem;
 }
@@ -692,8 +694,6 @@ gap: 10rem;
   max-width: 25rem;
   color: #606060;
 }
-
-
 
 .hero2 p {
   text-align: center;
