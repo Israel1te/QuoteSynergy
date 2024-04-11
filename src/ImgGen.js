@@ -62,31 +62,47 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
   }, [quoteData]);
 
   return (
-    <div
-      className="quote-container"
-      ref={containerRef}
-      style={{
-        position: 'relative',
-        top: '-90px',
-        border: '2px solid #ccc',
-        borderRadius: '8px',
-        padding: '10px',
-        //margin: '20px auto', // Center the container horizontally
-        maxWidth: '600px',
-        height: '250px', // Set a fixed height
-        overflow: 'hidden', // Prevent content from overflowing
-      }}
-    >
-      <div className="quote-content" style={{ display: isLoading ? 'none' : 'block', padding: '10px' }}>
-        <p>{quoteData ? `${quoteData.content}` : ''}</p>
-        <div style={{ textAlign: 'right' }}>
-          <p>{quoteData ? `- ${quoteData.author}` : ''}</p>
-        </div>
-      </div>
-      <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px' }}>
+    // <div
+    //   className="quote-container"
+    //   ref={containerRef}
+    //   style={{
+    //     position: 'relative',
+    //     top: '-90px',
+    //     border: '2px solid #ccc',
+    //     borderRadius: '8px',
+    //     padding: '10px',
+    //     //margin: '20px auto', // Center the container horizontally
+    //     maxWidth: '600px',
+    //     height: '250px', // Set a fixed height
+    //     overflow: 'hidden', // Prevent content from overflowing
+    //   }}
+    // >
+    //   <div className="quote-content" style={{ display: isLoading ? 'none' : 'block', padding: '10px' }}>
+    //     <p>{quoteData ? `${quoteData.content}` : ''}</p>
+    //     <div style={{ textAlign: 'right' }}>
+    //       <p>{quoteData ? `- ${quoteData.author}` : ''}</p>
+    //     </div>
+    //   </div>
+    //   <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px' }}>
+    //     {isLoading ? 'Generating...' : 'Generate New Quote'}
+    //   </button>
+    // </div>
+      <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px',
+      border: 'none',
+      color: 'white',
+      padding: '5px 10px', 
+      textAlign: 'center',
+      textDecoration: 'none', 
+      fontSize: '15px', 
+      backgroundColor: "#396b44",
+      borderRadius: '8px', 
+      cursor: 'pointer', 
+      marginTop: "20px",
+      transition: 'background-color 0.3s ease' }} 
+      onMouseOver={(e) => {e.target.style.backgroundColor = '#45a049'}} 
+      onMouseOut={(e) => {e.target.style.backgroundColor = '#4CAF50'}}>
         {isLoading ? 'Generating...' : 'Generate New Quote'}
       </button>
-    </div>
   );
 };
 
@@ -216,9 +232,9 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
         )}
       </div>
       <div className="customize-section" style={{ margin: '10px' }}>
-        <label style={{ marginRight: '10px' }}>
-          Font Family:
-          <select value={fontFamily} onChange={handleFontFamilyChange}>
+        <label style={{ marginRight: '10px', fontSize: "15px" }}>
+          Font Family  :  
+          <select style={{fontSize: "15px", padding: "5px 10px 5px 5px", marginLeft: "10px"}} value={fontFamily} onChange={handleFontFamilyChange }>
             <option value="Impact">Impact</option>
             <option value="Arial">Arial</option>
             <option value="Times New Roman">Times New Roman</option>
@@ -228,18 +244,18 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
             <option value="Comic Sans MS">Comic Sans MS</option>
           </select>
         </label>
-        <label style={{ marginRight: '10px' }}>
-          Font Color:
-          <input type="color" value={fontColor} onChange={handleFontColorChange} />
+        <label style={{ marginRight: '10px', fontSize: "15px" }}>
+          Font Color   : 
+          <input style={{fontSize: "15px", padding: "5px 10px 5px 5px", marginLeft: "10px"}} type="color" value={fontColor} onChange={handleFontColorChange} />
         </label>
-        <label style={{ marginRight: '10px' }}>
+        <label style={{ marginRight: '10px', fontSize: "15px" }}>
           Vertical Text Position:
-          <input type="range" min="35" max="65" value={textPosition} onChange={handleTextPositionChange} style={{ margin: '10px' }} />
+          <input style={{fontSize: "15px", padding: "5px 10px 5px 5px", marginLeft: "10px"}} type="range" min="35" max="65" value={textPosition} onChange={handleTextPositionChange} />
           <span>{textPosition}</span>
         </label>
       </div>
-      <button className="refresh-button" onClick={handleRefreshImage} style={{ margin: '10px' }}>Refresh Image</button>
-      <button className="export-button" onClick={handleExportImage} style={{ margin: '10px' }}>Export Image</button>
+      <button className="refresh-button" onClick={handleRefreshImage} style={{ margin: '15px', backgroundColor: "#396b44", color: "white", padding: "10px", borderRadius: "15px", border: "none"  }}>Refresh Image</button>
+      <button className="export-button" onClick={handleExportImage} style={{ margin: '15px', backgroundColor: "#396b44", color: "white", padding: "10px", borderRadius: "15px", border: "none"  }}>Export Image</button>
       <div style={{ marginTop: '20px' }}>
         Photo by <a href={authorUrl} target="_blank" rel="noopener noreferrer">{authorName}</a> on Pexels
       </div>

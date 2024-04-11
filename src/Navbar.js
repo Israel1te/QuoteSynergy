@@ -29,9 +29,6 @@ const Navbar = () => {
         <Link to="/openai" className="nav-link">
           Generate
         </Link>
-        <Link to="/create" className="nav-link">
-          Login
-        </Link>
         <Link to="/image-gen" className="nav-link">
           ImgGen
         </Link>

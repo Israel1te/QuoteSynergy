@@ -1,12 +1,12 @@
 // TODO: Refine webpage CSS to make it look more appealing/modern
 // TODO: Investigate unintended carousel behavior caused by window resizing
 
-import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
 import axios from 'axios'; // for making HTTP requests
+import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 import Slider from 'react-slick'; // Import react-slick
-import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
 import 'slick-carousel/slick/slick-theme.css'; // Import slick carousel theme CSS
+import 'slick-carousel/slick/slick.css'; // Import slick carousel CSS
 
 const PodcastCarousel = ({ podcasts, onPodcastClick }) => {
   const settings = {
@@ -234,6 +234,7 @@ const carouselSettings = {
 const styles = {
   container: {
     position: 'relative',
+    top: "100px",
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
