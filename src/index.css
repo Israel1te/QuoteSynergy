@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts-googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-/* base styles */
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -16,39 +19,51 @@ html {
   font-size: 62.5%;
 }
 h1 {
-font-size: 3.6rem;
+  font-size: 3.6rem;
+  text-align: center;
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
+  margin: 5rem 0;
+  text-align: center;
 }
 h3 {
-font-size: 2rem;
+  font-size: 2rem;
 }
 p,
 li {
   font-size: 1.8rem;
 }
 
+.content {
+  margin: auto;
+}
 .home {
   text-align: center;
-  padding-bottom: 10rem;
 }
-.header {
-  font-size: 2.4rem;
-  margin-bottom: 9.2rem;
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 2rem 5rem;
 }
-.header-title {
-  margin-bottom: 3.2rem;
+
+.flex-3 {
+  display: flex;
+  padding: 2rem 5rem;
+  gap: 5rem;
+  justify-content: center;
 }
-.header-small-text {
-  font-weight: 500;
-}
+
+/* ------------------------ */
+/* NAVBAR STYLES */
+/* ------------------------ */
 .navbar {
   padding: 3rem;
   display: flex;
   margin: 0 auto;
   align-items: center;
-  max-width: 120rem;
   border-bottom: 1px solid #dfdfdf;
   justify-content: space-between;
 }
@@ -80,53 +95,30 @@ li {
 .nav-link:active {
   opacity: 0.8;
 }
-.content {
-  margin: 4rem auto;
-  padding: 2rem;
-  max-width: 120rem
+
+/* ------------------------ */
+/* HERO STYLES */
+/* ------------------------ */
+
+.header {
+  margin-bottom: 5rem;
 }
 
-.create {
-  max-width: 40rem;
+.hero-section {
+  padding: 10rem 2rem 10rem;
+}
+.hero-container {
+  max-width: 130rem;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 5rem;
 }
-.create label,
-.openai label {
-  text-align: left;
-  display: block;
+.header-title {
+  margin-bottom: 3.2rem;
 }
-.create h2 {
-  color: #f1356d;
-  margin-bottom: 3rem;
-}
-.create input,
-.openai textarea,
-.create select {
-  width: 100%;
-  padding: 0.6px 1rem;
-  margin: 1rem 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-.create button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  cursor: pointer;
+.header-small-text {
+  font-weight: 400;
 }
 
-.openai button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  cursor: pointer;
-}
 .blog-list {
   display: flex;
   align-items: center;
@@ -139,15 +131,17 @@ li {
 }
 
 .blog-list .wrapper {
-  max-width: 60.5rem;
-  background: #e8e9e8;
+  max-width: 65rem;
+  margin-top: 2rem;
+  background: #f0f0f0;
   border-radius: 1.5rem;
-  padding: 3rem 3rem 2.5rem;
+  padding: 4rem 5rem;
 }
 
 .blog-list .wrapper h2 {
   font-weight: 600;
   text-align: center;
+  margin: 0;
 }
 
 .blog-list .wrapper .home-content {
@@ -171,6 +165,7 @@ li {
 }
 .quote-area .quote {
   text-align: center;
+  line-height: 1.6;
 }
 
 .home-content .author {
@@ -196,6 +191,7 @@ li {
   margin-top: 2rem;
   align-items: center;
 }
+
 .features ul {
   display: flex;
 }
@@ -206,7 +202,7 @@ li {
   display: flex;
   height: 4.7rem;
   width: 4.7rem;
-  border: 2px solid #40834e;
+  border: 2px solid #396b44;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -215,38 +211,39 @@ li {
 }
 .features ul li:hover {
   color: #fff;
-  background-color: #40834e;
+  background-color: #67a675;
 }
 .features button {
   border: none;
   outline: none;
-  background-color: #40834e;
+  background-color: #396b44;
   padding: 1.3rem 2.2rem;
   border-radius: 3rem;
   color: #fff;
   cursor: pointer;
+  font-size: 1.6rem;
+  transition: opacity 0.3s ease;
+}
+.features button:hover {
+  opacity: 0.8;
 }
 button.loading {
-  opacity: 0.7;
+  opacity: 0.8;
   pointer-events: none;
 }
-.hero-section {
-  padding-bottom: 8rem;
-}
-/* **************
-BENEFITS SECTION
-***************** */
+
+/* ------------------------ */
+/* BENEFITS STYLES */
+/* ------------------------ */
 
 .benefits-section {
-  margin-top: 10.8rem;
+  background-color: #f0f0f0;
 }
 
-.flex-2 {
-  display: flex;
-  gap: 5rem;
-  padding: 2rem 5rem;
-  align-items: center;
-  background-color: rgb(245, 244, 244);
+.benefits-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .benefits-header {
@@ -260,26 +257,25 @@ BENEFITS SECTION
   height: 0.2rem;
   background-color: #396b44;
   position: absolute;
-  bottom: -15%;
+  bottom: -20%;
   left: 0%;
 }
 .benefits-text {
-  padding: 3rem;
+  padding: 3rem 3rem 0rem 3rem;
   border-radius: 3rem;
-  
 }
 
-.benefits-section .flex-2 li {
+.benefits-section .grid-2 li {
   line-height: 1.5;
 }
 
 .section-2 {
-padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 .section-1 {
   padding-top: 8rem;
 }
-.benefits-section .flex-2 {
+.benefits-section .grid-2 {
   text-align: left;
 }
 
@@ -297,40 +293,48 @@ padding-bottom: 8rem;
   margin-bottom: 30px;
 }
 .benefits-section img {
-  max-width: 45rem;
+  max-width: 80%;
   height: auto;
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-
 .benefits-header {
   font-size: 2.8rem;
+  margin-top: 0;
 }
 
-/* **************
-FEATURES SECTION
-***************** */
+/* ------------------------ */
+/* FEATURES STYLES */
+/* ------------------------ */
 
 .features-section {
   padding: 10rem 2rem 10rem;
   background-color: #d0d9d2;
 }
 
+.features-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
 .features-header {
   font-size: 2.8rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 5rem;
 }
 
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-card {
   max-width: 80rem;
-  margin: 2rem;
-  padding: 2rem;
+  padding: 3rem;
   border: #b7b6b6 solid 0.1px;
   border-radius: 3rem;
   background-color: #ffffff;
@@ -354,33 +358,31 @@ FEATURES SECTION
 
 .feature-card p {
   color: #666;
+  line-height: 1.4;
 }
 .icons {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-/* **************
-HOW TO USE QUOTE GENERATOR
-***************** */
+/* ------------------------ */
+/* HOW-TO STYLES */
+/* ------------------------ */
+
 .how-to-section {
-  margin-top: 9.6rem;
+  margin-top: 10rem;
+  padding: 0rem 2rem;
+}
+.how-to-container {
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
-
-
-.flex-3 {
-  display: flex;
-  gap: 5rem;
-  padding: 2rem 2rem;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
 .quote-card {
+  max-width: 35rem;
   border-radius: 3rem;
   background-color: #f7f7f7fa;
   text-align: left;
-  padding: 3rem 2rem;
+  padding: 5rem 4rem;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   border: #e1e1e1 solid 0.1px;
 }
@@ -390,9 +392,9 @@ HOW TO USE QUOTE GENERATOR
   color: white;
   display: inline-block;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   font-size: 1.6rem;
 }
 
@@ -401,16 +403,316 @@ HOW TO USE QUOTE GENERATOR
   font-weight: bold;
 }
 .quote-text {
-  line-height: 1.25;
-  color: #666;
+  line-height: 1.4;
+  color: #4f4f4f;
+  text-align: left;
 }
-.quote-button:link,
-.quote-button:visited {
-  text-decoration: none;
-  font-weight: bold;
-  background-color: black;
-  color: white;
-  padding: 1.5rem 3rem;
-  border-radius: 2rem;
+
+/* ------------------------ */
+/* FAQ STYLES */
+/* ------------------------ */
+.faq-section {
+  margin-top: 10rem;
+}
+
+.faq-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.faq-question h3 {
+  text-align: left;
+}
+
+.faq-answer {
+  max-width: 96rem;
+  line-height: 1.6;
   font-size: 1.8rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 2rem 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: #396b44 4px solid;
+}
+
+details {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: "\002B";
+  color: #396b44;
+  border: 1.5px #396b44 solid;
+  border-radius: 4rem;
+  padding: 1rem 1.7rem;
+}
+
+details[open] summary {
+  box-shadow: none;
+}
+
+details[open] summary:after {
+  content: "\00D7";
+}
+
+details[open] .faq-answer {
+  padding: 0.5em 1em;
+}
+
+/* ------------------------ */
+/* FOOTER STYLES */
+/* ------------------------ */
+
+footer {
+  border-top: 1px solid #dfdfdf;
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+footer p {
+  margin-top: 5rem;
+  text-align: center;
+  color: rgb(103, 103, 103);
+}
+
+/* ------------------------ */
+/* GENERATE STYLES */
+/* ------------------------ */
+.openai {
+  padding: 0 5rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.openai textarea {
+  width: 60%;
+  font-size: 1.8rem;
+  height: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+}
+textarea:focus {
+  outline: none;
+}
+
+.promptInput {
+  margin-bottom: 2rem;
+}
+
+.openai button {
+  background: #396b44;
+  color: #fff;
+  border: none;
+  padding: 1.3rem 2.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  transition: opacity 0.3s ease;
+}
+
+.openai button:hover {
+  opacity: 0.8;
+}
+
+.openai button:active {
+  opacity: 0.6;
+}
+textarea {
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+#responseArea {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.tone-selector {
+  margin-bottom: 20px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container {
+  display: flex;
+}
+select {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
+}
+
+.tone-selector {
+  font-size: 1.8rem;
+}
+.quote-container {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #c4c4c4 solid;
+  padding: 3rem;
+  border-radius: 3rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.how-to-container h2 {
+  text-align: center;
+}
+.generator-container {
+  text-align: center;
+  background-color: #f7f7f7fa;
+  border: solid 1px black;
+  border-radius: 3rem;
+  padding: 2rem;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #e1e1e1 solid;
+  margin-bottom: 10rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: baseline;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input-container label {
+  font-size: 1.8rem;
+}
+
+#promptInput2 {
+  max-width: 10rem;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.tone-container {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+.amount-container {
+  display: flex;
+  align-items: baseline;
+
+  gap: 2rem;
+}
+.quote-container button {
+  background-color: white;
+  border: #396b44 2px solid;
+  height: 4.7rem;
+  width: 4.7rem;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.quote-container button:hover {
+  background-color: #67a675;
+}
+
+.fas {
+  font-size: 1.5rem;
+}
+/* GENERATE */
+.steps-container .flex-3 {
+gap: 10rem;
+}
+
+.generate-step {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #396b44;
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  max-width: 6rem;
+  height: 6rem;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.generate-text {
+  text-align: center;
+  max-width: 25rem;
+  color: #606060;
+}
+
+
+
+.hero2 p {
+  text-align: center;
+}
+
+.hero2-text {
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+.generate-flex2 {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.generate-flex3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.check-text {
+  color: #666;
 }
