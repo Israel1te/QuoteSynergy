@@ -20,10 +20,12 @@ html {
 }
 h1 {
   font-size: 3.6rem;
+  text-align: center;
 }
 h2 {
   font-size: 3.2rem;
   margin: 5rem 0;
+  text-align: center;
 }
 h3 {
   font-size: 2rem;
@@ -45,7 +47,6 @@ li {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   padding: 2rem 5rem;
-  align-items: center;
 }
 
 .flex-3 {
@@ -403,7 +404,8 @@ button.loading {
 }
 .quote-text {
   line-height: 1.4;
-  color: #666;
+  color: #4f4f4f;
+  text-align: left;
 }
 
 /* ------------------------ */
@@ -488,6 +490,7 @@ footer {
 
 footer p {
   margin-top: 5rem;
+  text-align: center;
   color: rgb(103, 103, 103);
 }
 
@@ -495,7 +498,9 @@ footer p {
 /* GENERATE STYLES */
 /* ------------------------ */
 .openai {
-  margin-left: 5rem;
+  padding: 0 5rem;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .openai textarea {
@@ -516,11 +521,6 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
-.openai label {
-  text-align: left;
-  display: block;
-}
-
 .openai button {
   background: #396b44;
   color: #fff;
@@ -532,7 +532,6 @@ textarea:focus {
   transition: opacity 0.3s ease;
 }
 
-
 .openai button:hover {
   opacity: 0.8;
 }
@@ -540,8 +539,180 @@ textarea:focus {
 .openai button:active {
   opacity: 0.6;
 }
+textarea {
+  margin: 0 auto;
+  border-radius: 1rem;
+}
 
 #responseArea {
   font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.tone-selector {
+  margin-bottom: 20px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container {
+  display: flex;
+}
+select {
   margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
+}
+
+.tone-selector {
+  font-size: 1.8rem;
+}
+.quote-container {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #c4c4c4 solid;
+  padding: 3rem;
+  border-radius: 3rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.how-to-container h2 {
+  text-align: center;
+}
+.generator-container {
+  text-align: center;
+  background-color: #f7f7f7fa;
+  border: solid 1px black;
+  border-radius: 3rem;
+  padding: 2rem;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border: #e1e1e1 solid;
+  margin-bottom: 10rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: baseline;
+  gap: 5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input-container label {
+  font-size: 1.8rem;
+}
+
+#promptInput2 {
+  max-width: 10rem;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.tone-container {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+.amount-container {
+  display: flex;
+  align-items: baseline;
+
+  gap: 2rem;
+}
+.quote-container button {
+  background-color: white;
+  border: #396b44 2px solid;
+  height: 4.7rem;
+  width: 4.7rem;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.quote-container button:hover {
+  background-color: #67a675;
+}
+
+.fas {
+  font-size: 1.5rem;
+}
+/* GENERATE */
+.steps-container .flex-3 {
+gap: 10rem;
+}
+
+.generate-step {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #396b44;
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  max-width: 6rem;
+  height: 6rem;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.generate-text {
+  text-align: center;
+  max-width: 25rem;
+  color: #606060;
+}
+
+
+
+.hero2 p {
+  text-align: center;
+}
+
+.hero2-text {
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+.generate-flex2 {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.generate-flex3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.check-text {
+  color: #666;
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "The Tom Ferry Podcast Experience",
+    "thumbnail": "https://deow9bq0xqvbj.cloudfront.net/image-logo/4214810/TFPE_Show_Image_28feez.jpg",
+    "embedCode": "<iframe title=\"The Tom Ferry Podcast Experience\" allowtransparency=\"true\" height=\"315\" width=\"100%\" style=\"border: none; min-width: min(100%, 430px);height:315px;\" scrolling=\"no\" data-name=\"pb-iframe-player\" src=\"https://www.podbean.com/player-v2/?i=jdb4r-40501a-pbblog-playlist&share=1&download=1&fonts=Arial&skin=1&font-color=auto&rtl=0&logo_link=episode_page&btn-skin=7&size=315\" loading=\"lazy\" allowfullscreen=\"\"></iframe>"
+  },
+  {
+    "id": 2,
+    "title": "The Resilient Mind",
+    "thumbnail": "https://deow9bq0xqvbj.cloudfront.net/image-logo/9569675/14266822-1642793343543-a022de3385d59.jpg",
+    "embedCode": "<iframe title=\"The Resilient Mind\" allowtransparency=\"true\" height=\"315\" width=\"100%\" style=\"border: none; min-width: min(100%, 430px);height:315px;\" scrolling=\"no\" data-name=\"pb-iframe-player\" src=\"https://www.podbean.com/player-v2/?i=xs4xj-92058b-pbblog-playlist&share=1&download=0&fonts=Arial&skin=f6f6f6&font-color=&rtl=0&logo_link=&btn-skin=2baf9e&size=315\" loading=\"lazy\" allowfullscreen=\"\"></iframe>"
+  },
+  {
+    "id": 3,
+    "title": "The Bible Recap",
+    "thumbnail": "https://deow9bq0xqvbj.cloudfront.net/image-logo/3736165/High_Res_h3b3bu.png",
+    "embedCode": "<iframe title=\"The Bible Recap\" allowtransparency=\"true\" height=\"315\" width=\"100%\" style=\"border: none; min-width: min(100%, 430px);height:315px;\" scrolling=\"no\" data-name=\"pb-iframe-player\" src=\"https://www.podbean.com/player-v2/?i=4pzrw-390265-pbblog-playlist&share=1&download=1&fonts=Arial&skin=1&font-color=&rtl=0&logo_link=podcast_page&btn-skin=7&size=315\" loading=\"lazy\" allowfullscreen=\"\"></iframe>"
+  },
+  {
+    "id": 4,
+    "title": "Bank of America Treasury Insights",
+    "thumbnail": "https://deow9bq0xqvbj.cloudfront.net/image-logo/13718700/WEB-06-23-0207_3000x3000.jpg",
+    "embedCode": "<iframe title=\"Bank of America Treasury Insights\" allowtransparency=\"true\" height=\"315\" width=\"100%\" style=\"border: none; min-width: min(100%, 430px);height:315px;\" scrolling=\"no\" data-name=\"pb-iframe-player\" src=\"https://www.podbean.com/player-v2/?i=pyfsh-d154ac-pbblog-playlist&pbad=0&share=1&download=1&fonts=Arial&skin=1&font-color=auto&rtl=0&logo_link=episode_page&btn-skin=7&size=315\" loading=\"lazy\" allowfullscreen=\"\"></iframe>"
+  },
+  {
+    "id": 5,
+    "title": "Heal, Survive & Thrive!",
+    "thumbnail": "https://deow9bq0xqvbj.cloudfront.net/image-logo/3520552/Stephanie_Lyn_1__kqc87u.png",
+    "embedCode": "<iframe title=\"Heal, Survive & Thrive!\" allowtransparency=\"true\" height=\"315\" width=\"100%\" style=\"border: none; min-width: min(100%, 430px);height:315px;\" scrolling=\"no\" data-name=\"pb-iframe-player\" src=\"https://www.podbean.com/player-v2/?i=5qn6p-35b828-pbblog-playlist&share=1&download=1&fonts=Arial&skin=1&font-color=auto&rtl=0&logo_link=episode_page&btn-skin=7&size=315\" loading=\"lazy\" allowfullscreen=\"\"></iframe>"
+  }
+]

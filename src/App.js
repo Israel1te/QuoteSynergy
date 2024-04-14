@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom/cjs/reac
 import NotFound from "./NotFound";
 
 import ImgGen from "./ImgGen";
+import CuratedGallery from "./CuratedGallery";
 
 function App() {
   return (
@@ -37,13 +38,16 @@ function App() {
             <Route path="/blog/post3">
               <BlogPost3 />
             </Route>
-          <Route path = "/image-gen">
+            <Route path = "/image-gen">
             <ImgGen/>
           </Route>
-          <Route path="*">
-            <NotFound />
+          <Route path = "/curated-gallery">
+            <CuratedGallery/>
           </Route>
-        </Switch>
+          <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
         </div>
       </div>
     </Router>
