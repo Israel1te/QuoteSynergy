@@ -68,6 +68,10 @@ const Openai = () => {
             role: "system",
             content: `You take the user input and then give them ${numberInput} quotes about the topic they give you with ${selectedTone} tone.`,
           },
+          // {
+          //   role: "system",
+          //   content: `You only give quotes, if the user asks a general question, tell them "..."`,
+          // },
           { role: "user", content: prompt },
           { role: "assistant", content: tonePrompt },
         ],
