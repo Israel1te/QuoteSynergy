@@ -249,6 +249,7 @@ button.loading {
 .benefits-header {
   display: inline-block;
   position: relative;
+  text-align: left;
 }
 .benefits-header::after {
   content: "";
@@ -341,15 +342,6 @@ button.loading {
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-}
-
-.feature-card:hover {
-  transform: scale(1.05);
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card:active {
-  opacity: 0.8;
 }
 
 .feature-card h3 {
