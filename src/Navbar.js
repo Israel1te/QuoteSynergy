@@ -24,13 +24,13 @@ const Navbar = () => {
           Home
         </Link>
         <Link to="/openai" className="nav-link">
-          Generate
+          Quote Generator
         </Link>
         <Link to="/image-gen" className="nav-link">
-          Imge Generate
+          Image Generator
         </Link>
         <Link to="/curated-gallery" className="nav-link">
-          Curated Content
+          Resources
         </Link>
       </div>
     </nav>
