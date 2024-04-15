@@ -67,6 +67,13 @@ li {
   border-bottom: 1px solid #dfdfdf;
   justify-content: space-between;
 }
+.active {
+ background-color: #396b44;
+ color: white;
+}
+.active:hover {
+  color: #333;
+}
 .logo {
   display: flex;
   gap: 0.5rem;

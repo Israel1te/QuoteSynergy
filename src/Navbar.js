@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -20,18 +21,22 @@ const Navbar = () => {
         </div>
       </div>
       <div className="links">
-        <Link to="/" className="nav-link">
+        <NavLink exact to="/" className="nav-link" activeClassName="active">
           Home
-        </Link>
-        <Link to="/openai" className="nav-link">
+        </NavLink>
+        <NavLink to="/openai" className="nav-link" activeClassName="active">
           Quote Generator
-        </Link>
-        <Link to="/image-gen" className="nav-link">
+        </NavLink>
+        <NavLink to="/image-gen" className="nav-link" activeClassName="active">
           Image Generator
-        </Link>
-        <Link to="/curated-gallery" className="nav-link">
+        </NavLink>
+        <NavLink
+          to="/curated-gallery"
+          className="nav-link"
+          activeClassName="active"
+        >
           Resources
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
