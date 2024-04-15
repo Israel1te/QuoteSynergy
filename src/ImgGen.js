@@ -27,13 +27,12 @@ import config from "./config.json";
 
 const QuoteGenerator = ({ setQuote, setAuthor }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [quoteData, setQuoteData] = useState(null);
-  const containerRef = useRef(null);
-  
+  const [, setQuoteData] = useState(null);
+  const [, setFetchedQuote] = useState('');
 
   useEffect(() => {
     fetchRandomQuote();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchRandomQuote = () => {
@@ -42,6 +41,7 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
       .then(response => response.json())
       .then(data => {
         setQuoteData(data);
+        setFetchedQuote(data.content);
         setQuote(`${data.content}`);
         setAuthor(data.author);
       })
@@ -54,55 +54,12 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
     fetchRandomQuote();
   };
 
-  useEffect(() => {
-    if (containerRef.current) {
-      const height = containerRef.current.offsetHeight;
-      containerRef.current.style.height = `${height}px`;
-    }
-  }, [quoteData]);
-
   return (
-    // <div
-    //   className="quote-container"
-    //   ref={containerRef}
-    //   style={{
-    //     position: 'relative',
-    //     top: '-90px',
-    //     border: '2px solid #ccc',
-    //     borderRadius: '8px',
-    //     padding: '10px',
-    //     //margin: '20px auto', // Center the container horizontally
-    //     maxWidth: '600px',
-    //     height: '250px', // Set a fixed height
-    //     overflow: 'hidden', // Prevent content from overflowing
-    //   }}
-    // >
-    //   <div className="quote-content" style={{ display: isLoading ? 'none' : 'block', padding: '10px' }}>
-    //     <p>{quoteData ? `${quoteData.content}` : ''}</p>
-    //     <div style={{ textAlign: 'right' }}>
-    //       <p>{quoteData ? `- ${quoteData.author}` : ''}</p>
-    //     </div>
-    //   </div>
-    //   <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px' }}>
-    //     {isLoading ? 'Generating...' : 'Generate New Quote'}
-    //   </button>
-    // </div>
-      <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px',
-      border: 'none',
-      color: 'white',
-      padding: '5px 10px', 
-      textAlign: 'center',
-      textDecoration: 'none', 
-      fontSize: '15px', 
-      backgroundColor: "#396b44",
-      borderRadius: '8px', 
-      cursor: 'pointer', 
-      marginTop: "20px",
-      transition: 'background-color 0.3s ease' }} 
-      onMouseOver={(e) => {e.target.style.backgroundColor = '#45a049'}} 
-      onMouseOut={(e) => {e.target.style.backgroundColor = '#4CAF50'}}>
-        {isLoading ? 'Generating...' : 'Generate New Quote'}
+    <div className="quote-generator-container" style={{ textAlign: 'center' }}>
+      <button className="generate-button" onClick={handleGenerateQuote} disabled={isLoading} style={{ margin: '10px', border: '2px solid #ccc', color: 'white', padding: '15px 20px', textAlign: 'center', textDecoration: 'none', fontSize: '12px', backgroundColor: '#396b44', borderRadius: '8px', cursor: 'pointer', marginTop: "20px", transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.target.style.backgroundColor = '#45a049' }} onMouseOut={(e) => { e.target.style.backgroundColor = '#4CAF50' }}>
+        {isLoading ? 'Generate New Quote' : 'Generate New Quote'}
       </button>
+    </div>
   );
 };
 
@@ -125,15 +82,17 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
   // Hold off on using the pexels API until the page is fully squared away so as to preserve the limited API calls
   const fetchRandomImage = async () => {
     try {
-      const response = await fetch('https://api.pexels.com/v1/search?query=nature&per_page=1&page=' + Math.floor(Math.random() * 10) + 1, {
+      const page = Math.floor(Math.random() * 10) + 1; // Generate a random page number
+      const response = await fetch(`https://api.pexels.com/v1/search?query=nature&page=${page}`, {
         headers: {
           Authorization: pexelsApiKey
         }
       });
       const data = await response.json();
-      setImageUrl(data.photos[0].src.large);
-      setAuthorName(data.photos[0].photographer);
-      setAuthorUrl(data.photos[0].photographer_url);
+      const randomIndex = Math.floor(Math.random() * data.photos.length); // Select a random image from the fetched results
+      setImageUrl(data.photos[randomIndex].src.large);
+      setAuthorName(data.photos[randomIndex].photographer);
+      setAuthorUrl(data.photos[randomIndex].photographer_url);
     } catch (error) {
       console.error('Error fetching random image:', error);
     }
@@ -166,55 +125,77 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
   const drawImageWithQuote = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
-
+  
     const image = new Image();
     image.crossOrigin = 'anonymous';
     image.onload = () => {
       canvas.width = image.width;
       canvas.height = image.height;
       context.drawImage(image, 0, 0);
-
-      context.font = '38px ' + fontFamily; // Apply selected font family
+  
       context.textAlign = 'center';
-      context.fillStyle = fontColor; // Apply selected font color
       context.shadowColor = 'black';
       context.shadowBlur = 0.5;
       context.strokeStyle = 'black';
       context.lineWidth = 0.5;
-
+  
       const maxTextWidth = canvas.width - 40; // Subtracting padding
-      const words = quote.split(' ');
-      let line = '';
+      let fontSize = 38; // Initial font size
       let y = (canvas.height / 100) * textPosition; // Adjust y position based on textPosition
-
-      for (let word of words) {
-        const testLine = line + word + ' ';
-        const metrics = context.measureText(testLine);
-        const testWidth = metrics.width;
-
-        if (testWidth > maxTextWidth) {
-          context.fillText(line, canvas.width / 2, y);
-          context.strokeText(line, canvas.width / 2, y); // Outline text
-          line = word + ' ';
-          y += 40; // Adjust line height
+  
+      // Adjust font size dynamically based on quote length and canvas dimensions
+      while (true) {
+        context.font = `${fontSize}px ${fontFamily}`; // Apply selected font family
+        const textHeight = fontSize * 1.5; // Estimated line height
+        const lines = splitLines(context, quote, maxTextWidth);
+        const textHeightNeeded = lines.length * textHeight;
+        
+        if (textHeightNeeded <= canvas.height - y - 40) {
+          break;
         } else {
-          line = testLine;
+          fontSize -= 2; // Reduce font size if text overflows
         }
       }
-
-      context.fillText(line, canvas.width / 2, y);
-      context.strokeText(line, canvas.width / 2, y); // Outline text
-
+  
+      // Draw text
+      context.fillStyle = fontColor; // Apply selected font color
+      const lines = splitLines(context, quote, maxTextWidth);
+      lines.forEach((line, index) => {
+        context.fillText(line, canvas.width / 2, y + index * (fontSize * 1.5));
+        context.strokeText(line, canvas.width / 2, y + index * (fontSize * 1.5)); // Outline text
+      });
+  
       // Apply font effects to author's name
-      context.font = '24px ' + fontFamily;
+      context.font = `24px ${fontFamily}`;
       context.textAlign = 'right';
       context.shadowBlur = 0.3;
-      //const authorWidth = context.measureText(`- ${author}`).width;
       const authorX = canvas.width - 60;
-      context.fillText(`- ${author}`, authorX, y + 40);
-      context.strokeText(`- ${author}`, authorX, y + 40);
+      context.fillText(`- ${author}`, authorX, y + lines.length * (fontSize * 1.5));
+      context.strokeText(`- ${author}`, authorX, y + lines.length * (fontSize * 1.5));
     };
     image.src = imageUrl;
+  };
+  
+  // Function to split text into multiple lines based on maximum width
+  const splitLines = (context, text, maxWidth) => {
+    const words = text.split(' ');
+    const lines = [];
+    let currentLine = '';
+  
+    words.forEach(word => {
+      const testLine = currentLine + (currentLine ? ' ' : '') + word;
+      const metrics = context.measureText(testLine);
+      const testWidth = metrics.width;
+      if (testWidth > maxWidth) {
+        lines.push(currentLine);
+        currentLine = word;
+      } else {
+        currentLine = testLine;
+      }
+    });
+  
+    lines.push(currentLine);
+    return lines;
   };
 
   useEffect(() => {
@@ -250,12 +231,14 @@ const ImageOverlay = ({ quote, quoteData, author }) => {
         </label>
         <label style={{ marginRight: '10px', fontSize: "15px" }}>
           Vertical Text Position:
-          <input style={{fontSize: "15px", padding: "5px 10px 5px 5px", marginLeft: "10px"}} type="range" min="35" max="65" value={textPosition} onChange={handleTextPositionChange} />
+          <input style={{fontSize: "15px", padding: "5px 10px 5px 5px", marginLeft: "10px"}} type="range" min="15" max="85" value={textPosition} onChange={handleTextPositionChange} />
           <span>{textPosition}</span>
         </label>
       </div>
-      <button className="refresh-button" onClick={handleRefreshImage} style={{ margin: '15px', backgroundColor: "#396b44", color: "white", padding: "10px", borderRadius: "15px", border: "none"  }}>Refresh Image</button>
-      <button className="export-button" onClick={handleExportImage} style={{ margin: '15px', backgroundColor: "#396b44", color: "white", padding: "10px", borderRadius: "15px", border: "none"  }}>Export Image</button>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button className="refresh-button" onClick={handleRefreshImage} style={{ margin: '0 10px', backgroundColor: '#396b44', color: 'white', padding: '10px', borderRadius: '15px', border: 'none', cursor: 'pointer' }}>Refresh Image</button>
+        <button className="export-button" onClick={handleExportImage} style={{ margin: '0 10px', backgroundColor: '#396b44', color: 'white', padding: '10px', borderRadius: '15px', border: 'none', cursor: 'pointer' }}>Export Image</button>
+      </div>
       <div style={{ marginTop: '20px' }}>
         Photo by <a href={authorUrl} target="_blank" rel="noopener noreferrer">{authorName}</a> on Pexels
       </div>
@@ -270,18 +253,19 @@ const ImgGen = () => {
 
   return (
     <div className="app-container" style={{ textAlign: 'center' }}>
-      <div className="content-container" style={{ marginTop: '50px' }}> {/* Adjust marginTop as needed */}
+      <div className="content-container" style={{ marginTop: '10px' }}>
         <div className="quote-generator" style={{ display: 'inline-block' }}>
           <QuoteGenerator setQuote={setQuote} setAuthor={setAuthor} />
         </div>
-        <div className="divider" style={{ position: 'relative', top: '-60px', height: '2px', background: '#ccc', margin: '20px auto', maxWidth: '600px' }}></div>
-        <div className="image-overlay" style={{ display: 'inline-block' }}>
+      <div></div>
+        <div className="image-overlay" style={{ display: 'inline-block', verticalAlign: 'top' }}>
           <ImageOverlay quote={quote} author={author} />
         </div>
       </div>
     </div>
   );
 };
+
 
 export default ImgGen;
 
