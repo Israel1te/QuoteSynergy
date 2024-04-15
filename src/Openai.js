@@ -217,7 +217,7 @@ const Openai = () => {
       <section>
         <div className="steps-container">
           <h2>Generate Quotes in 3 Simple Steps!</h2>
-          <div className="flex-3">
+          <div className="grid-3">
             <div className="generate-card">
               <p className="generate-step">1</p>
 

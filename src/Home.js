@@ -171,7 +171,7 @@ const Home = () => {
       <section className="how-to-section">
         <div className="how-to-container">
           <h2>How to use Quote Generator</h2>
-          <div className="flex-3">
+          <div className="grid-3">
             <div className="quote-card">
               <p className="quote-step">Step 1</p>
               <h3>Describe Quote</h3>
