@@ -67,6 +67,7 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
           margin: "10px",
           margin: "10px",
           marginBottom: "15px",
+  
         }}
       >
         <input
@@ -442,11 +443,14 @@ const ImgGen = () => {
       </div>
       <section>
         <div className="steps-container">
-          <h2>Generate Quotes in 3 Simple Steps!</h2>
-          <div className="flex-3">
+          <h2>Create Inspiring Quote Images in 3 Easy Steps!</h2>
+          <div className="grid-3">
             <div className="generate-card">
               <p className="generate-step">1</p>
-              <p className="generate-text">Generate a random quote and image or input a quote of your choosing</p>
+              <p className="generate-text">
+                Generate a random quote and image or input a quote of your
+                choosing
+              </p>
             </div>
             <div className="generate-card">
               <p className="generate-step">2</p>
