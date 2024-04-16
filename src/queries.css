@@ -35,13 +35,14 @@ display: flex;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     justify-content: center;
-    align-items: center;
+ align-self: baseline;
   }
  
 
   .quote-card {
-    max-width: 90%;
+max-width: 90rem;
     padding: 3rem;
+    margin: 0 auto;
   }
   .benefits-img {
     display: flex;
