@@ -185,6 +185,8 @@ const Home = () => {
               <h3>Select Preference</h3>
               <p className="quote-text">
                 Fine-tune your experience by adjusting the tone of the quotes.
+                Whether you're seeking motivation, witty, or humor, our Quote
+                Generator allows you to personalize your preferences.
               </p>
             </div>
 

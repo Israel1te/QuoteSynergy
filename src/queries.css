@@ -40,7 +40,6 @@ display: flex;
  
 
   .quote-card {
-max-width: 90rem;
     padding: 3rem;
     margin: 0 auto;
   }
@@ -50,8 +49,13 @@ max-width: 90rem;
     align-items: center;
   }
 
+  .section-1 img {
+    margin-bottom: 3rem;
+  }
+
   .benefits-img img {
-    max-width: 70%;
+    max-width: 60%;
+    margin-top: 3rem;
     height: auto;
   }
 
