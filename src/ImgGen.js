@@ -59,7 +59,9 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
 
   return (
     <div className="quote-generator-container" style={{ textAlign: "center" }}>
-      <h1>Create beautiful and easily shareable quote images within seconds</h1>
+      <h1 style={{ maxWidth: '900px'}}>
+        Create Beautiful and Easily Shareable Quote Images Within Seconds!
+      </h1>
 
       <p
         style={{
@@ -67,7 +69,6 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
           margin: "10px",
           margin: "10px",
           marginBottom: "15px",
-  
         }}
       >
         <input
@@ -78,7 +79,7 @@ const QuoteGenerator = ({ setQuote, setAuthor }) => {
         />
         Check this box to enter your own quote!
       </p>
-      <p style={{ fontSize: "18px",marginBottom:'10px', }}>
+      <p style={{ fontSize: "18px", marginBottom: "10px" }}>
         <span className="tip-text">Tip:</span> copy and paste inspiring quotes
         from our{" "}
         <NavLink to="/openai" className="openai-link">

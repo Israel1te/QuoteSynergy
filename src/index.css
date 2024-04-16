@@ -327,6 +327,12 @@ button.loading {
 .benefits-section ul li:first-child {
   margin-bottom: 30px;
 }
+.section-2 img {
+  margin-top: 2rem;
+}
+.section-1 img {
+  margin-bottom: 5rem;
+}
 .benefits-section img {
   max-width: 80%;
   height: auto;
@@ -764,4 +770,9 @@ gap: 10rem;
 }
 .steps-container {
    padding: 0rem 5rem;
+   max-width: 130rem;
+   margin: 0 auto;
+}
+.steps-container .grid-3 {
+gap: 1rem;
 }
