@@ -1,5 +1,17 @@
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -19,20 +31,76 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-      <div className="links">
-        <Link to="/" className="nav-link">
+      <div className={`links ${showMenu ? "show" : ""}`}>
+        <NavLink
+          exact
+          to="/"
+          className="nav-link"
+          activeClassName="active"
+          onClick={closeMenu}
+        >
           Home
-        </Link>
-        <Link to="/openai" className="nav-link">
-          Generate
-        </Link>
-        <Link to="/image-gen" className="nav-link">
-          Imge Generate
-        </Link>
-        <Link to="/curated-gallery" className="nav-link">
-          Curated Content
-        </Link>
+        </NavLink>
+        <NavLink
+          to="/openai"
+          className="nav-link"
+          activeClassName="active"
+          onClick={closeMenu}
+        >
+          Quote Generator
+        </NavLink>
+        <NavLink
+          to="/image-gen"
+          className="nav-link"
+          activeClassName="active"
+          onClick={closeMenu}
+        >
+          Image Generator
+        </NavLink>
+        <NavLink
+          to="/curated-gallery"
+          className="nav-link"
+          activeClassName="active"
+          onClick={closeMenu}
+        >
+          Resources
+        </NavLink>
+        <button className="close-menu" onClick={toggleMenu}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
+      <button className="hamburger-menu" onClick={toggleMenu}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </nav>
   );
 };
