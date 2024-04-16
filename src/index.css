@@ -55,6 +55,13 @@ li {
   gap: 5rem;
   justify-content: center;
 }
+.flex-2 {
+    display: flex;
+  padding: 2rem 5rem;
+  gap: 5rem;
+  justify-content: center;
+  align-items: baseline;
+}
 
 /* ------------------------ */
 /* NAVBAR STYLES */
@@ -68,8 +75,8 @@ li {
   justify-content: space-between;
 }
 .active {
- background-color: #396b44;
- color: white;
+  background-color: #396b44;
+  color: white;
 }
 .active:hover {
   color: #333;
@@ -523,6 +530,7 @@ textarea:focus {
 .openai button {
   background: #396b44;
   color: #fff;
+  font-size: 1.6rem;
   border: none;
   padding: 1.3rem 2.2rem;
   border-radius: 0.8rem;
@@ -667,7 +675,7 @@ select:focus {
 }
 /* GENERATE */
 .steps-container .flex-3 {
-gap: 10rem;
+  gap: 10rem;
 }
 
 .generate-step {
@@ -692,8 +700,6 @@ gap: 10rem;
   color: #606060;
 }
 
-
-
 .hero2 p {
   text-align: center;
 }
@@ -714,4 +720,24 @@ gap: 10rem;
 }
 .check-text {
   color: #666;
+}
+
+/* IMG GENERATE */
+
+.content-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding: 10rem 5rem 10rem;
+}
+.quote-generator-container h1 {
+  margin-bottom: 5rem;
+}
+.openai-link {
+  text-decoration: none;
+  font-weight: 600;
+}
+.tip-text {
+  font-style: italic;
+
 }

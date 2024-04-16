@@ -98,7 +98,8 @@ const Openai = () => {
             Spark Your Imagination!
           </h1>
           <p className="hero2-text">
-            Create beautiful and easily shareable quote images within seconds.
+            Unlock the power of words and unleash your creativity with every
+            generated quote!
           </p>
           <div>
             <div className="generate-flex3">
