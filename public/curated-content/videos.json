@@ -1,26 +1,26 @@
 {
   "motivational": [
-    "https://www.youtube.com/watch?v=rrkrvAUbU9Y",
-    "https://www.youtube.com/watch?v=zy2Zj8yIe6c",
-    "https://www.youtube.com/watch?v=pxBQLFLei70",
-    "https://www.youtube.com/watch?v=u8OySa4uZmU",
-    "https://www.youtube.com/watch?v=h89uOvUDVO4",
-    "https://www.youtube.com/watch?v=5MgBikgcWnY"
+    { "title": "The puzzle of motivation | Dan Pink | TED", "url": "https://www.youtube.com/watch?v=rrkrvAUbU9Y" },
+    { "title": "A 3-Step Guide to Believing in Yourself", "url": "https://www.youtube.com/watch?v=zy2Zj8yIe6c" },
+    { "title": "University of Texas at Austin 2014 Commencement Address - Admiral William H. McRaven", "url": "https://www.youtube.com/watch?v=pxBQLFLei70" },
+    { "title": "10 Minutes for the next 10 Years - Matthew McConaughey Motivational Speech", "url": "https://www.youtube.com/watch?v=u8OySa4uZmU" },
+    { "title": "Warren Buffett Leaves The Audience SPEECHLESS | One of the Most Inspiring Speeches Ever", "url": "https://www.youtube.com/watch?v=h89uOvUDVO4" },
+    { "title": "The first 20 hours -- how to learn anything | Josh Kaufman | TEDxCSU", "url": "https://www.youtube.com/watch?v=5MgBikgcWnY" }
   ],
   "educational": [
-    "https://www.youtube.com/watch?v=P6FORpg0KVo",
-    "https://www.youtube.com/watch?v=rhgwIhB58PA",
-    "https://www.youtube.com/watch?v=s86-Z-CbaHA",
-    "https://www.youtube.com/watch?v=QqY8fY0TqaQ",
-    "https://www.youtube.com/watch?v=-sB12gk9ESA",
-    "https://www.youtube.com/watch?v=HvZoJMliCpE",
-    "https://www.youtube.com/watch?v=dG4QNnVlmis",
-    "https://www.youtube.com/watch?v=B1J2RMorJXM"
+    { "title": "How to Make Learning as Addictive as Social Media | Luis Von Ahn | TED", "url": "https://www.youtube.com/watch?v=P6FORpg0KVo" },
+    { "title": "The Biggest Myth In Education", "url": "https://www.youtube.com/watch?v=rhgwIhB58PA" },
+    { "title": "The Banach–Tarski Paradox", "url": "https://www.youtube.com/watch?v=s86-Z-CbaHA" },
+    { "title": "The 9 Experiments That Will Change Your View of Light (And Blow Your Mind)", "url": "https://www.youtube.com/watch?v=QqY8fY0TqaQ" },
+    { "title": "A.I. Revolution | Full Documentary | NOVA | PBS", "url": "https://www.youtube.com/watch?v=-sB12gk9ESA" },
+    { "title": "How Electromagnetism Rules the Universe | How the Universe Works | Science Channel", "url": "https://www.youtube.com/watch?v=HvZoJMliCpE" },
+    { "title": "Tokyo's Map, Explained", "url": "https://www.youtube.com/watch?v=dG4QNnVlmis" },
+    { "title": "Light Years Ahead | The 1969 Apollo Guidance Computer", "url": "https://www.youtube.com/watch?v=B1J2RMorJXM" }
   ],
   "lighthearted": [
-    "https://www.youtube.com/watch?v=oRDRfikj2z8",
-    "https://www.youtube.com/watch?v=0lbF7QwLZuo",
-    "https://www.youtube.com/watch?v=m89rOgJn7rk",
-    "https://www.youtube.com/watch?v=o0XIOR2FQEM"
-]
+    { "title": "Baby Animals 4K - Amazing World Of Young Animals | Scenic Relaxation Film", "url": "https://www.youtube.com/watch?v=oRDRfikj2z8" },
+    { "title": "Yosemite - America's Most Spectacular National Park", "url": "https://www.youtube.com/watch?v=0lbF7QwLZuo" },
+    { "title": "Fastest and Most Skillful Workers Ever", "url": "https://www.youtube.com/watch?v=m89rOgJn7rk" },
+    { "title": "Try Not to Laugh CHALLENGE | 30 Minutes of Funny Dogs", "url": "https://www.youtube.com/watch?v=o0XIOR2FQEM" }
+  ]
 }
