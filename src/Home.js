@@ -44,7 +44,10 @@ const Home = () => {
             </div>
             <div>
               <div className="benefits-img">
-                <img src={img2} alt="a quote that says 'Difficult Roads Lead To Beautiful Destinations'" />
+                <img
+                  src={img2}
+                  alt="a quote that says 'Difficult Roads Lead To Beautiful Destinations'"
+                />
               </div>
             </div>
           </div>
