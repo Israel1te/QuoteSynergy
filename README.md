@@ -22,7 +22,9 @@ Individuals often face challenges related to mental health and burnout due to so
 
 ## Demo
 
-Include a link to a live demo if available, or provide screenshots/gifs demonstrating the functionality of your project.
+Link to live demo
+1. This app was not made to be deployed, excuse the load time and deployment errors.
+- https://quote-syn.web.app/ 
 
 ## Features
 
