@@ -23,8 +23,24 @@ Individuals often face challenges related to mental health and burnout due to so
 ## Demo
 
 Link to live demo
-1. This app was not made to be deployed, excuse the load time and deployment errors.
-- https://quote-syn.web.app/ 
+1. This app was not made for deployment and user may experience an initial load of 1-2 minutes.
+- https://quote-syn.web.app/
+
+Screenshots
+- Landing Page
+  * <img width="1676" alt="Screenshot 2024-05-15 at 10 18 03 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/42ed90be-8ee2-4004-a4ba-3c82f7f79e71">
+  * <img width="1441" alt="Screenshot 2024-05-15 at 10 18 47 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/92db4ee4-0fd8-428c-878c-47646a2c71c9">
+  * <img width="966" alt="Screenshot 2024-05-15 at 10 18 58 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/e2ec27b6-2ef6-4f98-8ab7-77104a82142d">
+
+- OpenAI API and Quote Generator
+  * <img width="1680" alt="Screenshot 2024-05-15 at 10 22 16 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/a23e23d4-bec1-4b29-8a90-4db5c72324db">
+  * <img width="878" alt="Screenshot 2024-05-15 at 10 29 34 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/d89d1f37-9990-4268-9615-582113d32958">
+
+- Quote Generator with Images
+  * <img width="920" alt="Screenshot 2024-05-15 at 10 31 10 AM" src="https://github.com/Israel1te/QuoteSynergy/assets/122021958/1e164cd2-7e5a-43ea-bbf7-a2b3b9c93bea">
+  * user can type in their own quote, generate a random one, or use one from the quote generator tab
+
+
 
 ## Features
 
